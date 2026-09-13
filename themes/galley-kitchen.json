@@ -1,0 +1,4772 @@
+{
+ "id": "galley-kitchen",
+ "name": "Galley Kitchen",
+ "blurb": "A brigade kitchen at service. Every repo is a station, every session a cook, every thread a ticket on the rail.",
+ "planets": [
+  "service",
+  "daybreak"
+ ],
+ "worlds": {
+  "service": {
+   "id": "service",
+   "name": "Service",
+   "blurb": "Golden hour, every station lit, tickets on the rail.",
+   "ground": {
+    "low": "#414737",
+    "high": "#8a8f6d",
+    "tint": "#a9ad86"
+   },
+   "rock": "#8a8279",
+   "horizon": "#e2c59c",
+   "sky": {
+    "top": "#27456a",
+    "bottom": "#efcda1"
+   },
+   "fog": {
+    "color": "#c9ab86",
+    "near": 92,
+    "far": 238
+   },
+   "sun": {
+    "color": "#ffd7a4",
+    "intensity": 2.45,
+    "night": 0.17
+   },
+   "ambient": {
+    "sky": "#d3b391",
+    "ground": "#474d38",
+    "intensity": 1.0
+   },
+   "atmosphere": 1,
+   "craters": 0,
+   "roughness": 0.62,
+   "scatter": "kitchengarden",
+   "companion": {
+    "name": "Evening moon",
+    "color": "#f4ecd8",
+    "size": 3.0,
+    "glow": "#fff6e2"
+   },
+   "dust": 0.22
+  },
+  "daybreak": {
+   "id": "daybreak",
+   "name": "Daybreak",
+   "blurb": "Deliveries in, nothing fired yet. The quiet hour before service.",
+   "ground": {
+    "low": "#4f5a4c",
+    "high": "#8d9b7e",
+    "tint": "#b4c3a2"
+   },
+   "rock": "#7d8279",
+   "horizon": "#d2dee5",
+   "sky": {
+    "top": "#37699b",
+    "bottom": "#dfeaf1"
+   },
+   "fog": {
+    "color": "#bac9d3",
+    "near": 104,
+    "far": 268
+   },
+   "sun": {
+    "color": "#fff6e8",
+    "intensity": 2.6,
+    "night": 0.12
+   },
+   "ambient": {
+    "sky": "#bdd2e2",
+    "ground": "#4b5546",
+    "intensity": 1.05
+   },
+   "atmosphere": 1,
+   "craters": 0,
+   "roughness": 0.5,
+   "scatter": "kitchengarden",
+   "companion": {
+    "name": "Morning moon",
+    "color": "#e8edf2",
+    "size": 2.2,
+    "glow": "#f4f8fb"
+   },
+   "dust": 0.12
+  }
+ },
+ "scatters": {
+  "kitchengarden": [
+   {
+    "part": "Bush_1_E_Color1",
+    "weight": 6,
+    "size": [
+     0.45,
+     0.9
+    ],
+    "sink": 0.07,
+    "upright": true,
+    "tint": [
+     1.25,
+     1.35,
+     0.95
+    ]
+   },
+   {
+    "part": "Bush_3_B_Color1",
+    "weight": 5,
+    "size": [
+     0.4,
+     0.85
+    ],
+    "sink": 0.07,
+    "upright": true,
+    "tint": [
+     1.1,
+     1.3,
+     0.85
+    ]
+   },
+   {
+    "part": "Grass_2_D_Color1",
+    "weight": 8,
+    "size": [
+     0.55,
+     1.2
+    ],
+    "sink": 0.05,
+    "upright": true,
+    "tint": [
+     1.2,
+     1.35,
+     0.9
+    ]
+   },
+   {
+    "part": "Grass_1_A_Color1",
+    "weight": 6,
+    "size": [
+     0.5,
+     1.1
+    ],
+    "sink": 0.05,
+    "upright": true,
+    "tint": [
+     1.15,
+     1.3,
+     0.95
+    ]
+   },
+   {
+    "part": "Tree_1_A_Color1",
+    "weight": 2,
+    "size": [
+     0.32,
+     0.55
+    ],
+    "sink": 0.02,
+    "upright": true,
+    "tint": [
+     1.1,
+     1.25,
+     0.85
+    ]
+   },
+   {
+    "part": "Rock_1_D_Color1",
+    "weight": 2,
+    "size": [
+     0.35,
+     0.8
+    ],
+    "sink": 0.32,
+    "tint": true
+   },
+   {
+    "part": "Rock_3_A_Color1",
+    "weight": 1,
+    "size": [
+     0.3,
+     0.7
+    ],
+    "sink": 0.34,
+    "tint": true
+   }
+  ]
+ },
+ "status": {
+  "working": "On the line",
+  "waiting": "On the pass",
+  "blocked": "86'd",
+  "celebrating": "Served",
+  "idle": "Mise en place",
+  "sleeping": "In the walk-in",
+  "spawning": "Clocking in",
+  "leaving": "Breaking down"
+ },
+ "plotPalette": [
+  "#D68C45",
+  "#4C6F81",
+  "#9AB47E",
+  "#b95000",
+  "#2E5AAC",
+  "#936F39",
+  "#287D3C",
+  "#7F492F",
+  "#A4C3D1",
+  "#2F4F4F",
+  "#DA1414",
+  "#617979"
+ ],
+ "crew": {
+  "scale": 0.56,
+  "body": {
+   "color": "#241F1D",
+   "roughness": 0.9,
+   "metalness": 0.02,
+   "tint": "none"
+  },
+  "look": {
+   "working": {
+    "trim": "#287D3C",
+    "eye": [
+     0.4,
+     2.4,
+     1.0
+    ]
+   },
+   "waiting": {
+    "trim": "#2E5AAC",
+    "eye": [
+     0.5,
+     1.4,
+     3.0
+    ]
+   },
+   "blocked": {
+    "trim": "#DA1414",
+    "eye": [
+     3.0,
+     0.5,
+     0.4
+    ]
+   },
+   "celebrating": {
+    "trim": "#D68C45",
+    "eye": [
+     2.9,
+     2.0,
+     0.6
+    ]
+   },
+   "idle": {
+    "trim": "#617979",
+    "eye": [
+     1.2,
+     1.4,
+     1.5
+    ]
+   },
+   "sleeping": {
+    "trim": "#4C6F81",
+    "eye": [
+     0.6,
+     0.8,
+     1.5
+    ]
+   },
+   "spawning": {
+    "trim": "#9AB47E",
+    "eye": [
+     1.4,
+     2.4,
+     0.9
+    ]
+   },
+   "leaving": {
+    "trim": "#858C94",
+    "eye": [
+     1.0,
+     1.1,
+     1.0
+    ]
+   }
+  },
+  "effortTones": {
+   "low": "#4C6F81",
+   "medium": "#9AB47E",
+   "high": "#D68C45",
+   "xhigh": "#b95000",
+   "max": "#DA1414",
+   "ultracode": "#3B82F6"
+  },
+  "effortUnknownTone": "#6E7276",
+  "suitTones": [
+   "#4C6F81",
+   "#7F492F",
+   "#9AB47E",
+   "#936F39",
+   "#617979"
+  ],
+  "parts": [
+   {
+    "id": "head",
+    "bone": "head",
+    "at": [
+     0,
+     0.42,
+     0
+    ],
+    "shape": {
+     "sphere": [
+      0.42,
+      14,
+      10
+     ]
+    },
+    "material": {
+     "roughness": 0.84,
+     "metalness": 0.02,
+     "color": "#3b322b"
+    },
+    "wear": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "id": "face",
+    "bone": "head",
+    "material": "face",
+    "tint": "eye",
+    "at": [
+     0,
+     0.42,
+     0
+    ],
+    "shadow": false,
+    "shape": {
+     "cap": [
+      0.428,
+      1.78,
+      1.02,
+      16,
+      10
+     ]
+    },
+    "wear": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "id": "beret",
+    "bone": "head",
+    "at": [
+     0,
+     0.745,
+     0
+    ],
+    "shape": {
+     "parts": [
+      {
+       "sphere": [
+        0.355,
+        14,
+        8
+       ],
+       "stretch": [
+        1.06,
+        0.46,
+        1.06
+       ],
+       "color": "#F4ECDE"
+      },
+      {
+       "cyl": [
+        0.305,
+        0.305,
+        0.05,
+        14
+       ],
+       "shift": [
+        0,
+        -0.07,
+        0
+       ],
+       "color": "#E7DAC4"
+      }
+     ]
+    },
+    "material": {
+     "roughness": 0.94,
+     "vertexColors": true
+    },
+    "wear": [
+     true,
+     null,
+     null
+    ]
+   },
+   {
+    "id": "mushroom",
+    "bone": "head",
+    "at": [
+     0,
+     0,
+     0
+    ],
+    "shape": {
+     "parts": [
+      {
+       "cyl": [
+        0.30500000000000005,
+        0.275,
+        0.16,
+        14
+       ],
+       "shift": [
+        0,
+        0.765,
+        0
+       ],
+       "color": "#F4ECDE"
+      },
+      {
+       "box": [
+        0.022,
+        0.1472,
+        0.022
+       ],
+       "shift": [
+        0.287,
+        0.765,
+        0.0
+       ],
+       "color": "#E7DAC4"
+      },
+      {
+       "box": [
+        0.022,
+        0.1472,
+        0.022
+       ],
+       "shift": [
+        0.2029,
+        0.765,
+        0.2029
+       ],
+       "color": "#E7DAC4"
+      },
+      {
+       "box": [
+        0.022,
+        0.1472,
+        0.022
+       ],
+       "shift": [
+        -0.0,
+        0.765,
+        0.287
+       ],
+       "color": "#E7DAC4"
+      },
+      {
+       "box": [
+        0.022,
+        0.1472,
+        0.022
+       ],
+       "shift": [
+        -0.2029,
+        0.765,
+        0.2029
+       ],
+       "color": "#E7DAC4"
+      },
+      {
+       "box": [
+        0.022,
+        0.1472,
+        0.022
+       ],
+       "shift": [
+        -0.287,
+        0.765,
+        -0.0
+       ],
+       "color": "#E7DAC4"
+      },
+      {
+       "box": [
+        0.022,
+        0.1472,
+        0.022
+       ],
+       "shift": [
+        -0.2029,
+        0.765,
+        -0.2029
+       ],
+       "color": "#E7DAC4"
+      },
+      {
+       "box": [
+        0.022,
+        0.1472,
+        0.022
+       ],
+       "shift": [
+        0.0,
+        0.765,
+        -0.287
+       ],
+       "color": "#E7DAC4"
+      },
+      {
+       "box": [
+        0.022,
+        0.1472,
+        0.022
+       ],
+       "shift": [
+        0.2029,
+        0.765,
+        -0.2029
+       ],
+       "color": "#E7DAC4"
+      },
+      {
+       "sphere": [
+        0.42,
+        16,
+        10
+       ],
+       "stretch": [
+        1,
+        0.8,
+        1
+       ],
+       "shift": [
+        0,
+        1.0214,
+        0
+       ],
+       "color": "#F4ECDE"
+      }
+     ]
+    },
+    "material": {
+     "roughness": 0.92,
+     "metalness": 0,
+     "vertexColors": true
+    },
+    "wear": [
+     null,
+     true,
+     null
+    ]
+   },
+   {
+    "id": "mushroomGrand",
+    "bone": "head",
+    "at": [
+     0,
+     0,
+     0
+    ],
+    "shape": {
+     "parts": [
+      {
+       "cyl": [
+        0.30500000000000005,
+        0.275,
+        0.56,
+        14
+       ],
+       "shift": [
+        0,
+        0.9650000000000001,
+        0
+       ],
+       "color": "#F4ECDE"
+      },
+      {
+       "box": [
+        0.022,
+        0.5152000000000001,
+        0.022
+       ],
+       "shift": [
+        0.287,
+        0.9650000000000001,
+        0.0
+       ],
+       "color": "#E7DAC4"
+      },
+      {
+       "box": [
+        0.022,
+        0.5152000000000001,
+        0.022
+       ],
+       "shift": [
+        0.2322,
+        0.9650000000000001,
+        0.1687
+       ],
+       "color": "#E7DAC4"
+      },
+      {
+       "box": [
+        0.022,
+        0.5152000000000001,
+        0.022
+       ],
+       "shift": [
+        0.0887,
+        0.9650000000000001,
+        0.273
+       ],
+       "color": "#E7DAC4"
+      },
+      {
+       "box": [
+        0.022,
+        0.5152000000000001,
+        0.022
+       ],
+       "shift": [
+        -0.0887,
+        0.9650000000000001,
+        0.273
+       ],
+       "color": "#E7DAC4"
+      },
+      {
+       "box": [
+        0.022,
+        0.5152000000000001,
+        0.022
+       ],
+       "shift": [
+        -0.2322,
+        0.9650000000000001,
+        0.1687
+       ],
+       "color": "#E7DAC4"
+      },
+      {
+       "box": [
+        0.022,
+        0.5152000000000001,
+        0.022
+       ],
+       "shift": [
+        -0.287,
+        0.9650000000000001,
+        -0.0
+       ],
+       "color": "#E7DAC4"
+      },
+      {
+       "box": [
+        0.022,
+        0.5152000000000001,
+        0.022
+       ],
+       "shift": [
+        -0.2322,
+        0.9650000000000001,
+        -0.1687
+       ],
+       "color": "#E7DAC4"
+      },
+      {
+       "box": [
+        0.022,
+        0.5152000000000001,
+        0.022
+       ],
+       "shift": [
+        -0.0887,
+        0.9650000000000001,
+        -0.273
+       ],
+       "color": "#E7DAC4"
+      },
+      {
+       "box": [
+        0.022,
+        0.5152000000000001,
+        0.022
+       ],
+       "shift": [
+        0.0887,
+        0.9650000000000001,
+        -0.273
+       ],
+       "color": "#E7DAC4"
+      },
+      {
+       "box": [
+        0.022,
+        0.5152000000000001,
+        0.022
+       ],
+       "shift": [
+        0.2322,
+        0.9650000000000001,
+        -0.1687
+       ],
+       "color": "#E7DAC4"
+      },
+      {
+       "sphere": [
+        0.5,
+        16,
+        10
+       ],
+       "stretch": [
+        1,
+        0.8,
+        1
+       ],
+       "shift": [
+        0,
+        1.455,
+        0
+       ],
+       "color": "#F4ECDE"
+      }
+     ]
+    },
+    "material": {
+     "roughness": 0.92,
+     "metalness": 0,
+     "vertexColors": true
+    },
+    "wear": [
+     null,
+     null,
+     true
+    ]
+   },
+   {
+    "id": "coat",
+    "bone": "chest",
+    "at": [
+     0,
+     0.016,
+     0.01
+    ],
+    "shape": {
+     "parts": [
+      {
+       "cyl": [
+        0.388,
+        0.4,
+        0.55,
+        16
+       ],
+       "stretch": [
+        1,
+        1,
+        0.75
+       ],
+       "color": "#F4ECDE"
+      },
+      {
+       "cyl": [
+        0.34500000000000003,
+        0.35500000000000004,
+        0.08,
+        16
+       ],
+       "stretch": [
+        1,
+        1,
+        0.75
+       ],
+       "shift": [
+        0,
+        0.255,
+        0
+       ],
+       "color": "#E7DAC4"
+      },
+      {
+       "cyl": [
+        0.4,
+        0.40800000000000003,
+        0.05,
+        16
+       ],
+       "stretch": [
+        1,
+        1,
+        0.75
+       ],
+       "shift": [
+        0,
+        -0.255,
+        0
+       ],
+       "color": "#E7DAC4"
+      },
+      {
+       "box": [
+        0.022,
+        0.49000000000000005,
+        0.03
+       ],
+       "shift": [
+        0,
+        0,
+        0.29600000000000004
+       ],
+       "color": "#E7DAC4"
+      }
+     ]
+    },
+    "material": {
+     "roughness": 0.9,
+     "metalness": 0,
+     "vertexColors": true
+    },
+    "wear": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "id": "coatSkirt",
+    "bone": "chest",
+    "at": [
+     0,
+     -0.409,
+     0.01
+    ],
+    "shape": {
+     "shell": [
+      0.4,
+      0.44,
+      0.34,
+      12
+     ],
+     "stretch": [
+      1,
+      1,
+      0.78
+     ]
+    },
+    "material": {
+     "roughness": 0.92,
+     "double": true,
+     "color": "#F4ECDE"
+    },
+    "flex": {
+     "from": "top",
+     "dir": [
+      0,
+      0,
+      -1
+     ],
+     "side": [
+      1,
+      0,
+      0
+     ],
+     "sway": 0.03,
+     "rate": 1.9,
+     "wave": 1.8,
+     "lean": 0.2,
+     "turn": 0.14,
+     "bias": 1.9
+    },
+    "wear": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "id": "buttons",
+    "bone": "chest",
+    "at": [
+     0,
+     0.016,
+     0.01
+    ],
+    "shape": {
+     "parts": [
+      {
+       "sphere": [
+        0.03,
+        8,
+        6
+       ],
+       "stretch": [
+        1,
+        1,
+        0.62
+       ]
+      },
+      {
+       "box": [
+        0.052,
+        0.01,
+        0.012
+       ],
+       "shift": [
+        0,
+        0,
+        0.014
+       ],
+       "color": "#00000022"
+      }
+     ]
+    },
+    "material": {
+     "roughness": 0.7,
+     "metalness": 0.05,
+     "color": "#EDE2CE"
+    },
+    "wear": [
+     {
+      "copies": [
+       {
+        "at": [
+         0.0,
+         0.2,
+         0.31000000000000005
+        ]
+       },
+       {
+        "at": [
+         0.0,
+         0.065,
+         0.31000000000000005
+        ]
+       },
+       {
+        "at": [
+         0.0,
+         -0.07,
+         0.31000000000000005
+        ]
+       },
+       {
+        "at": [
+         0.0,
+         -0.20500000000000002,
+         0.31000000000000005
+        ]
+       }
+      ]
+     },
+     {
+      "copies": [
+       {
+        "at": [
+         0.0,
+         0.2,
+         0.31000000000000005
+        ]
+       },
+       {
+        "at": [
+         0.0,
+         0.065,
+         0.31000000000000005
+        ]
+       },
+       {
+        "at": [
+         0.0,
+         -0.07,
+         0.31000000000000005
+        ]
+       },
+       {
+        "at": [
+         0.0,
+         -0.20500000000000002,
+         0.31000000000000005
+        ]
+       }
+      ]
+     },
+     {
+      "copies": [
+       {
+        "at": [
+         0.0,
+         0.2,
+         0.31000000000000005
+        ]
+       },
+       {
+        "at": [
+         0.0,
+         0.065,
+         0.31000000000000005
+        ]
+       },
+       {
+        "at": [
+         0.0,
+         -0.07,
+         0.31000000000000005
+        ]
+       },
+       {
+        "at": [
+         0.0,
+         -0.20500000000000002,
+         0.31000000000000005
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "id": "neckerchief",
+    "bone": "chest",
+    "tint": "suit",
+    "at": [
+     0,
+     0.273,
+     0.01
+    ],
+    "shape": {
+     "parts": [
+      {
+       "torus": [
+        0.315,
+        0.072,
+        8,
+        10,
+        6.2832
+       ],
+       "rotate": [
+        1.57079635,
+        0,
+        0
+       ],
+       "stretch": [
+        1,
+        1,
+        0.78
+       ],
+       "tint": true
+      },
+      {
+       "sphere": [
+        0.075,
+        8,
+        6
+       ],
+       "shift": [
+        0,
+        -0.045,
+        0.235
+       ],
+       "tint": true
+      },
+      {
+       "cone": [
+        0.062,
+        0.15,
+        6
+       ],
+       "rotate": [
+        0.3,
+        0,
+        0
+       ],
+       "shift": [
+        0,
+        -0.15,
+        0.225
+       ],
+       "tint": true
+      }
+     ]
+    },
+    "material": {
+     "roughness": 0.85,
+     "metalness": 0,
+     "vertexColors": true,
+     "color": "#E7DAC4"
+    },
+    "wear": [
+     null,
+     true,
+     true
+    ]
+   },
+   {
+    "id": "sleeveL",
+    "bone": "upperarm.l",
+    "at": [
+     0,
+     0,
+     0
+    ],
+    "shape": {
+     "parts": [
+      {
+       "cyl": [
+        0.155,
+        0.14800000000000002,
+        0.124,
+        12
+       ],
+       "shift": [
+        0,
+        0.06,
+        0
+       ],
+       "color": "#F4ECDE"
+      },
+      {
+       "cyl": [
+        0.15000000000000002,
+        0.16,
+        0.06,
+        12
+       ],
+       "shift": [
+        0,
+        0.15200000000000002,
+        0
+       ],
+       "color": "#E7DAC4"
+      }
+     ]
+    },
+    "material": {
+     "roughness": 0.88,
+     "metalness": 0,
+     "vertexColors": true
+    },
+    "wear": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "id": "sleeveR",
+    "bone": "upperarm.r",
+    "at": [
+     0,
+     0,
+     0
+    ],
+    "shape": {
+     "parts": [
+      {
+       "cyl": [
+        0.155,
+        0.14800000000000002,
+        0.124,
+        12
+       ],
+       "shift": [
+        0,
+        0.06,
+        0
+       ],
+       "color": "#F4ECDE"
+      },
+      {
+       "cyl": [
+        0.15000000000000002,
+        0.16,
+        0.06,
+        12
+       ],
+       "shift": [
+        0,
+        0.15200000000000002,
+        0
+       ],
+       "color": "#E7DAC4"
+      }
+     ]
+    },
+    "material": {
+     "roughness": 0.88,
+     "metalness": 0,
+     "vertexColors": true
+    },
+    "wear": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "id": "wristL",
+    "bone": "hand.l",
+    "at": [
+     0,
+     -0.075,
+     0
+    ],
+    "shape": {
+     "cyl": [
+      0.128,
+      0.122,
+      0.075,
+      10
+     ]
+    },
+    "material": {
+     "roughness": 0.9,
+     "metalness": 0,
+     "color": "#E7DAC4"
+    },
+    "wear": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "id": "wristR",
+    "bone": "hand.r",
+    "at": [
+     0,
+     -0.075,
+     0
+    ],
+    "shape": {
+     "cyl": [
+      0.128,
+      0.122,
+      0.075,
+      10
+     ]
+    },
+    "material": {
+     "roughness": 0.9,
+     "metalness": 0,
+     "color": "#E7DAC4"
+    },
+    "wear": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "id": "apronBaker",
+    "bone": "chest",
+    "tint": "suit",
+    "at": [
+     0,
+     -0.319,
+     0.01
+    ],
+    "shape": {
+     "parts": [
+      {
+       "box": [
+        0.34,
+        0.4872000000000001,
+        0.02
+       ],
+       "shift": [
+        0,
+        -0.1764,
+        0.305
+       ],
+       "tint": true
+      },
+      {
+       "box": [
+        0.22,
+        0.4872000000000001,
+        0.02
+       ],
+       "rotate": [
+        0,
+        -0.62,
+        0
+       ],
+       "shift": [
+        0.245,
+        -0.1764,
+        0.245
+       ],
+       "tint": true
+      },
+      {
+       "box": [
+        0.22,
+        0.4872000000000001,
+        0.02
+       ],
+       "rotate": [
+        0,
+        0.62,
+        0
+       ],
+       "shift": [
+        -0.245,
+        -0.1764,
+        0.245
+       ],
+       "tint": true
+      },
+      {
+       "box": [
+        0.21,
+        0.3528,
+        0.02
+       ],
+       "shift": [
+        0,
+        0.24360000000000004,
+        0.305
+       ],
+       "tint": true
+      },
+      {
+       "box": [
+        0.13,
+        0.3528,
+        0.02
+       ],
+       "rotate": [
+        0,
+        -0.58,
+        0
+       ],
+       "shift": [
+        0.155,
+        0.24360000000000004,
+        0.275
+       ],
+       "tint": true
+      },
+      {
+       "box": [
+        0.13,
+        0.3528,
+        0.02
+       ],
+       "rotate": [
+        0,
+        0.58,
+        0
+       ],
+       "shift": [
+        -0.155,
+        0.24360000000000004,
+        0.275
+       ],
+       "tint": true
+      },
+      {
+       "box": [
+        0.055,
+        0.3,
+        0.018
+       ],
+       "rotate": [
+        0.3,
+        0,
+        0
+       ],
+       "shift": [
+        0.15,
+        0.53,
+        0.2
+       ],
+       "tint": true
+      },
+      {
+       "box": [
+        0.055,
+        0.3,
+        0.018
+       ],
+       "rotate": [
+        0.3,
+        0,
+        0
+       ],
+       "shift": [
+        -0.15,
+        0.53,
+        0.2
+       ],
+       "tint": true
+      },
+      {
+       "cyl": [
+        0.4,
+        0.4,
+        0.055,
+        14
+       ],
+       "stretch": [
+        1,
+        1,
+        0.78
+       ],
+       "shift": [
+        0,
+        0.047200000000000034,
+        -0.3
+       ],
+       "color": "#EFE0CC"
+      }
+     ]
+    },
+    "material": {
+     "roughness": 0.93,
+     "metalness": 0,
+     "double": true,
+     "vertexColors": true,
+     "color": "#E7DAC4"
+    },
+    "flex": {
+     "from": "top",
+     "dir": [
+      0,
+      0,
+      -1
+     ],
+     "side": [
+      1,
+      0,
+      0
+     ],
+     "sway": 0.028,
+     "rate": 2.0,
+     "wave": 2.1,
+     "lean": 0.22,
+     "curl": 0.03,
+     "turn": 0.15,
+     "bias": 2.0
+    },
+    "wear": [
+     true,
+     true,
+     {
+      "scale": 1.06
+     }
+    ]
+   },
+   {
+    "id": "crossBack",
+    "bone": "chest",
+    "at": [
+     0,
+     0.091,
+     -0.3
+    ],
+    "shape": {
+     "parts": [
+      {
+       "box": [
+        0.07,
+        0.46,
+        0.02
+       ],
+       "rotate": [
+        0,
+        0,
+        0.46
+       ],
+       "shift": [
+        0.02,
+        0,
+        0
+       ],
+       "color": "#E7DAC4"
+      },
+      {
+       "box": [
+        0.07,
+        0.46,
+        0.02
+       ],
+       "rotate": [
+        0,
+        0,
+        -0.46
+       ],
+       "shift": [
+        -0.02,
+        0,
+        0
+       ],
+       "color": "#E7DAC4"
+      }
+     ]
+    },
+    "material": {
+     "roughness": 0.94,
+     "vertexColors": true
+    },
+    "wear": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "id": "torchon",
+    "bone": "hips",
+    "at": [
+     0.26,
+     0.228,
+     0.17
+    ],
+    "shape": {
+     "box": [
+      0.14,
+      0.3,
+      0.022
+     ]
+    },
+    "material": {
+     "roughness": 0.96,
+     "double": true,
+     "color": "#E7DAC4"
+    },
+    "flex": {
+     "from": "top",
+     "dir": [
+      0,
+      0,
+      -1
+     ],
+     "sway": 0.04,
+     "rate": 2.8,
+     "wave": 3.0,
+     "lean": 0.26,
+     "turn": 0.22,
+     "bias": 1.7
+    },
+    "wear": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "id": "cuffL",
+    "bone": "lowerleg.l",
+    "at": [
+     0,
+     0.04,
+     0
+    ],
+    "shape": {
+     "parts": [
+      {
+       "cyl": [
+        0.135,
+        0.14500000000000002,
+        0.2,
+        12
+       ],
+       "color": "#241F1D"
+      },
+      {
+       "box": [
+        0.042,
+        0.19,
+        0.02
+       ],
+       "rotate": [
+        0,
+        0.0,
+        0
+       ],
+       "shift": [
+        0.0,
+        0.0,
+        0.145
+       ],
+       "color": "#D8CDBA"
+      },
+      {
+       "box": [
+        0.042,
+        0.19,
+        0.02
+       ],
+       "rotate": [
+        0,
+        -0.7854,
+        0
+       ],
+       "shift": [
+        0.1025,
+        0.0,
+        0.1025
+       ],
+       "color": "#241F1D"
+      },
+      {
+       "box": [
+        0.042,
+        0.19,
+        0.02
+       ],
+       "rotate": [
+        0,
+        -1.5708,
+        0
+       ],
+       "shift": [
+        0.145,
+        0.0,
+        -0.0
+       ],
+       "color": "#D8CDBA"
+      },
+      {
+       "box": [
+        0.042,
+        0.19,
+        0.02
+       ],
+       "rotate": [
+        0,
+        -2.3562,
+        0
+       ],
+       "shift": [
+        0.1025,
+        0.0,
+        -0.1025
+       ],
+       "color": "#241F1D"
+      },
+      {
+       "box": [
+        0.042,
+        0.19,
+        0.02
+       ],
+       "rotate": [
+        0,
+        -3.1416,
+        0
+       ],
+       "shift": [
+        -0.0,
+        0.0,
+        -0.145
+       ],
+       "color": "#D8CDBA"
+      },
+      {
+       "box": [
+        0.042,
+        0.19,
+        0.02
+       ],
+       "rotate": [
+        0,
+        -3.927,
+        0
+       ],
+       "shift": [
+        -0.1025,
+        0.0,
+        -0.1025
+       ],
+       "color": "#241F1D"
+      },
+      {
+       "box": [
+        0.042,
+        0.19,
+        0.02
+       ],
+       "rotate": [
+        0,
+        -4.7124,
+        0
+       ],
+       "shift": [
+        -0.145,
+        0.0,
+        0.0
+       ],
+       "color": "#D8CDBA"
+      },
+      {
+       "box": [
+        0.042,
+        0.19,
+        0.02
+       ],
+       "rotate": [
+        0,
+        -5.4978,
+        0
+       ],
+       "shift": [
+        -0.1025,
+        0.0,
+        0.1025
+       ],
+       "color": "#241F1D"
+      },
+      {
+       "cyl": [
+        0.151,
+        0.14500000000000002,
+        0.035,
+        12
+       ],
+       "shift": [
+        0,
+        0.1,
+        0
+       ],
+       "color": "#241F1D"
+      }
+     ]
+    },
+    "material": {
+     "roughness": 0.9,
+     "vertexColors": true
+    },
+    "wear": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "id": "cuffR",
+    "bone": "lowerleg.r",
+    "at": [
+     0,
+     0.04,
+     0
+    ],
+    "shape": {
+     "parts": [
+      {
+       "cyl": [
+        0.135,
+        0.14500000000000002,
+        0.2,
+        12
+       ],
+       "color": "#241F1D"
+      },
+      {
+       "box": [
+        0.042,
+        0.19,
+        0.02
+       ],
+       "rotate": [
+        0,
+        0.0,
+        0
+       ],
+       "shift": [
+        0.0,
+        0.0,
+        0.145
+       ],
+       "color": "#D8CDBA"
+      },
+      {
+       "box": [
+        0.042,
+        0.19,
+        0.02
+       ],
+       "rotate": [
+        0,
+        -0.7854,
+        0
+       ],
+       "shift": [
+        0.1025,
+        0.0,
+        0.1025
+       ],
+       "color": "#241F1D"
+      },
+      {
+       "box": [
+        0.042,
+        0.19,
+        0.02
+       ],
+       "rotate": [
+        0,
+        -1.5708,
+        0
+       ],
+       "shift": [
+        0.145,
+        0.0,
+        -0.0
+       ],
+       "color": "#D8CDBA"
+      },
+      {
+       "box": [
+        0.042,
+        0.19,
+        0.02
+       ],
+       "rotate": [
+        0,
+        -2.3562,
+        0
+       ],
+       "shift": [
+        0.1025,
+        0.0,
+        -0.1025
+       ],
+       "color": "#241F1D"
+      },
+      {
+       "box": [
+        0.042,
+        0.19,
+        0.02
+       ],
+       "rotate": [
+        0,
+        -3.1416,
+        0
+       ],
+       "shift": [
+        -0.0,
+        0.0,
+        -0.145
+       ],
+       "color": "#D8CDBA"
+      },
+      {
+       "box": [
+        0.042,
+        0.19,
+        0.02
+       ],
+       "rotate": [
+        0,
+        -3.927,
+        0
+       ],
+       "shift": [
+        -0.1025,
+        0.0,
+        -0.1025
+       ],
+       "color": "#241F1D"
+      },
+      {
+       "box": [
+        0.042,
+        0.19,
+        0.02
+       ],
+       "rotate": [
+        0,
+        -4.7124,
+        0
+       ],
+       "shift": [
+        -0.145,
+        0.0,
+        0.0
+       ],
+       "color": "#D8CDBA"
+      },
+      {
+       "box": [
+        0.042,
+        0.19,
+        0.02
+       ],
+       "rotate": [
+        0,
+        -5.4978,
+        0
+       ],
+       "shift": [
+        -0.1025,
+        0.0,
+        0.1025
+       ],
+       "color": "#241F1D"
+      },
+      {
+       "cyl": [
+        0.151,
+        0.14500000000000002,
+        0.035,
+        12
+       ],
+       "shift": [
+        0,
+        0.1,
+        0
+       ],
+       "color": "#241F1D"
+      }
+     ]
+    },
+    "material": {
+     "roughness": 0.9,
+     "vertexColors": true
+    },
+    "wear": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "id": "clogL",
+    "bone": "lowerleg.l",
+    "at": [
+     0,
+     0.21,
+     0
+    ],
+    "shape": {
+     "parts": [
+      {
+       "cyl": [
+        0.127,
+        0.121,
+        0.13,
+        10
+       ],
+       "color": "#F4ECDE"
+      },
+      {
+       "rbox": [
+        0.145,
+        0.085,
+        0.17,
+        0.03
+       ],
+       "shift": [
+        0,
+        -0.03,
+        -0.075
+       ],
+       "color": "#F4ECDE"
+      },
+      {
+       "rbox": [
+        0.15,
+        0.035,
+        0.19,
+        0.014
+       ],
+       "shift": [
+        0,
+        -0.072,
+        -0.07
+       ],
+       "color": "#3A342E"
+      }
+     ]
+    },
+    "material": {
+     "roughness": 0.72,
+     "metalness": 0.02,
+     "vertexColors": true
+    },
+    "wear": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "id": "clogR",
+    "bone": "lowerleg.r",
+    "at": [
+     0,
+     0.21,
+     0
+    ],
+    "shape": {
+     "parts": [
+      {
+       "cyl": [
+        0.127,
+        0.121,
+        0.13,
+        10
+       ],
+       "color": "#F4ECDE"
+      },
+      {
+       "rbox": [
+        0.145,
+        0.085,
+        0.17,
+        0.03
+       ],
+       "shift": [
+        0,
+        -0.03,
+        -0.075
+       ],
+       "color": "#F4ECDE"
+      },
+      {
+       "rbox": [
+        0.15,
+        0.035,
+        0.19,
+        0.014
+       ],
+       "shift": [
+        0,
+        -0.072,
+        -0.07
+       ],
+       "color": "#3A342E"
+      }
+     ]
+    },
+    "material": {
+     "roughness": 0.72,
+     "metalness": 0.02,
+     "vertexColors": true
+    },
+    "wear": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "id": "knife",
+    "bone": "hand.r",
+    "when": "resting",
+    "at": [
+     0,
+     -0.03,
+     0.03
+    ],
+    "rot": [
+     -0.38,
+     0,
+     3.1415927
+    ],
+    "tint": "suit",
+    "shape": {
+     "parts": [
+      {
+       "rbox": [
+        0.045,
+        0.14,
+        0.038,
+        0.014
+       ],
+       "shift": [
+        0,
+        0.055,
+        0
+       ],
+       "color": "#8A6A44"
+      },
+      {
+       "cyl": [
+        0.026,
+        0.026,
+        0.022,
+        8
+       ],
+       "rotate": [
+        1.57079635,
+        0,
+        0
+       ],
+       "shift": [
+        0,
+        0.135,
+        0
+       ],
+       "color": "#7F492F",
+       "tint": true
+      },
+      {
+       "box": [
+        0.012,
+        0.4,
+        0.115
+       ],
+       "shift": [
+        0,
+        0.355,
+        0.018
+       ],
+       "color": "#E4E9EE"
+      },
+      {
+       "cone": [
+        0.062,
+        0.13,
+        4
+       ],
+       "rotate": [
+        0,
+        0.785398175,
+        0
+       ],
+       "stretch": [
+        0.2,
+        1,
+        1
+       ],
+       "shift": [
+        0,
+        0.6,
+        0
+       ],
+       "color": "#E4E9EE"
+      }
+     ]
+    },
+    "material": {
+     "roughness": 0.3,
+     "metalness": 0.55,
+     "vertexColors": true
+    },
+    "wear": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "id": "pan",
+    "bone": "hand.r",
+    "when": "working",
+    "at": [
+     0,
+     -0.04,
+     0.02
+    ],
+    "rot": [
+     -0.22,
+     0,
+     3.1415927
+    ],
+    "tint": "suit",
+    "shape": {
+     "parts": [
+      {
+       "cyl": [
+        0.026,
+        0.03,
+        0.34,
+        6
+       ],
+       "shift": [
+        0,
+        0.16,
+        0
+       ],
+       "color": "#8A6A44"
+      },
+      {
+       "cyl": [
+        0.215,
+        0.165,
+        0.075,
+        14
+       ],
+       "shift": [
+        0,
+        0.36,
+        0.2
+       ],
+       "color": "#3a3a3c"
+      },
+      {
+       "cyl": [
+        0.205,
+        0.16,
+        0.02,
+        14
+       ],
+       "shift": [
+        0,
+        0.4,
+        0.2
+       ],
+       "color": "#b95000",
+       "tint": true
+      }
+     ]
+    },
+    "material": {
+     "roughness": 0.45,
+     "metalness": 0.4,
+     "vertexColors": true
+    },
+    "wear": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "id": "rollingPin",
+    "bone": "hand.l",
+    "when": "resting",
+    "at": [
+     0,
+     -0.03,
+     0.03
+    ],
+    "rot": [
+     -0.34,
+     0,
+     3.1415927
+    ],
+    "shape": {
+     "parts": [
+      {
+       "cyl": [
+        0.075,
+        0.075,
+        0.4,
+        10
+       ],
+       "shift": [
+        0,
+        0.34,
+        0
+       ],
+       "color": "#C8A97E"
+      },
+      {
+       "cyl": [
+        0.028,
+        0.028,
+        0.12,
+        8
+       ],
+       "shift": [
+        0,
+        0.1,
+        0
+       ],
+       "color": "#9C7B52"
+      },
+      {
+       "cyl": [
+        0.028,
+        0.028,
+        0.12,
+        8
+       ],
+       "shift": [
+        0,
+        0.6,
+        0
+       ],
+       "color": "#9C7B52"
+      }
+     ]
+    },
+    "material": {
+     "roughness": 0.8,
+     "vertexColors": true
+    },
+    "wear": [
+     null,
+     true,
+     true
+    ]
+   }
+  ]
+ },
+ "hud": {
+  "accent": "#b95000",
+  "green": "#287D3C",
+  "blue": "#2E5AAC",
+  "amber": "#D68C45",
+  "red": "#DA1414",
+  "teal": "#4C6F81"
+ },
+ "sky": {
+  "nightFloor": "#0A0F12",
+  "duskThick": "#E0913C",
+  "duskThin": "#43506B",
+  "fill": "#A9BFD2"
+ },
+ "ship": {
+  "surfaces": {
+   "stone": "#CFC3AE",
+   "stoneDark": "#A8997F",
+   "trim": "#2F4F4F",
+   "trimDark": "#22403F",
+   "brass": "#936F39",
+   "glass": "#BFD4DD",
+   "mark": "#2F4F4F",
+   "signface": "#F6EFE2",
+   "mat": "#2A2724",
+   "shadow": "#1A1A18",
+   "lamp": "#FFD9A0",
+   "leaf": "#9AB47E",
+   "soil": "#4A3C2E"
+  },
+  "lights": {
+   "beacon": [
+    2.6,
+    1.9,
+    0.8
+   ],
+   "pad": [
+    1.05,
+    0.85,
+    0.55
+   ],
+   "glass": [
+    1.35,
+    1.0,
+    0.6
+   ],
+   "rampStrip": [
+    1.0,
+    0.75,
+    0.35
+   ]
+  },
+  "door": [
+   0,
+   0,
+   4.6
+  ],
+  "recipe": {
+   "steps": [
+    {
+     "plate": [
+      11.0,
+      8.0,
+      0.3
+     ],
+     "paint": "stoneDark",
+     "z": 1.1
+    },
+    {
+     "plate": [
+      10.2,
+      7.2,
+      0.16
+     ],
+     "paint": "stone",
+     "z": 1.1,
+     "y": 0.3
+    },
+    {
+     "plate": [
+      5.4,
+      0.62,
+      0.22
+     ],
+     "paint": "stoneDark",
+     "z": 4.55,
+     "y": 0.3
+    },
+    {
+     "plate": [
+      5.0,
+      0.58,
+      0.22
+     ],
+     "paint": "stoneDark",
+     "z": 4.05,
+     "y": 0.52
+    },
+    {
+     "plate": [
+      4.6,
+      0.56,
+      0.22
+     ],
+     "paint": "stoneDark",
+     "z": 3.58,
+     "y": 0.74
+    },
+    {
+     "plate": [
+      4.4,
+      1.5,
+      0.12
+     ],
+     "paint": "mat",
+     "z": 4.9,
+     "y": 0.44
+    },
+    {
+     "box": [
+      2.6,
+      6.2,
+      0.55
+     ],
+     "paint": "stone",
+     "base": true,
+     "x": -3.3,
+     "y": 0.38,
+     "z": 3.1
+    },
+    {
+     "box": [
+      2.6,
+      6.2,
+      0.55
+     ],
+     "paint": "stone",
+     "base": true,
+     "x": 3.3,
+     "y": 0.38,
+     "z": 3.1
+    },
+    {
+     "box": [
+      4.2,
+      1.0,
+      0.55
+     ],
+     "paint": "stone",
+     "y": 5.6,
+     "z": 3.1
+    },
+    {
+     "box": [
+      9.2,
+      0.34,
+      0.72
+     ],
+     "paint": "stoneDark",
+     "y": 6.4,
+     "z": 3.1
+    },
+    {
+     "box": [
+      8.8,
+      2.3,
+      0.45
+     ],
+     "paint": "stone",
+     "y": 6.72,
+     "z": 3.05
+    },
+    {
+     "box": [
+      4.0,
+      5.2,
+      0.12
+     ],
+     "paint": "shadow",
+     "base": true,
+     "y": 0.9,
+     "z": 2.76
+    },
+    {
+     "box": [
+      1.94,
+      4.5,
+      0.16
+     ],
+     "paint": "trim",
+     "base": true,
+     "x": -1.01,
+     "y": 0.96,
+     "z": 3.36
+    },
+    {
+     "box": [
+      1.94,
+      4.5,
+      0.16
+     ],
+     "paint": "trim",
+     "base": true,
+     "x": 1.01,
+     "y": 0.96,
+     "z": 3.36
+    },
+    {
+     "box": [
+      1.44,
+      3.1,
+      0.06
+     ],
+     "paint": "glass",
+     "lit": "glass",
+     "x": -1.01,
+     "y": 3.45,
+     "z": 3.44
+    },
+    {
+     "box": [
+      1.44,
+      3.1,
+      0.06
+     ],
+     "paint": "glass",
+     "lit": "glass",
+     "x": 1.01,
+     "y": 3.45,
+     "z": 3.44
+    },
+    {
+     "cyl": [
+      0.055,
+      0.055,
+      1.5,
+      8
+     ],
+     "paint": "brass",
+     "x": -0.2,
+     "y": 2.55,
+     "z": 3.5
+    },
+    {
+     "cyl": [
+      0.055,
+      0.055,
+      1.5,
+      8
+     ],
+     "paint": "brass",
+     "x": 0.2,
+     "y": 2.55,
+     "z": 3.5
+    },
+    {
+     "box": [
+      1.94,
+      0.7,
+      0.2
+     ],
+     "paint": "brass",
+     "x": -1.01,
+     "y": 1.15,
+     "z": 3.36
+    },
+    {
+     "box": [
+      1.94,
+      0.7,
+      0.2
+     ],
+     "paint": "brass",
+     "x": 1.01,
+     "y": 1.15,
+     "z": 3.36
+    },
+    {
+     "box": [
+      4.0,
+      0.66,
+      0.08
+     ],
+     "paint": "glass",
+     "lit": "glass",
+     "y": 5.62,
+     "z": 3.34
+    },
+    {
+     "prism": [
+      7.4,
+      0.85,
+      1.9
+     ],
+     "paint": "trim",
+     "y": 5.75,
+     "z": 4.2
+    },
+    {
+     "box": [
+      7.4,
+      0.34,
+      0.1
+     ],
+     "paint": "trimDark",
+     "y": 5.62,
+     "z": 5.12
+    },
+    {
+     "ring": {
+      "cyl": [
+       0.19,
+       0.19,
+       0.1,
+       12
+      ],
+      "rotate": [
+       1.5707963,
+       0,
+       0
+      ],
+      "paint": "trimDark",
+      "y": 5.5
+     },
+     "count": 9,
+     "radius": 3.3,
+     "jitter": 0,
+     "z": 5.12
+    },
+    {
+     "cyl": [
+      0.07,
+      0.07,
+      1.4,
+      6
+     ],
+     "rotate": [
+      0.9,
+      0,
+      0
+     ],
+     "paint": "brass",
+     "x": -3.4,
+     "y": 5.7,
+     "z": 4.5
+    },
+    {
+     "cyl": [
+      0.07,
+      0.07,
+      1.4,
+      6
+     ],
+     "rotate": [
+      0.9,
+      0,
+      0
+     ],
+     "paint": "brass",
+     "x": 3.4,
+     "y": 5.7,
+     "z": 4.5
+    },
+    {
+     "box": [
+      8.5,
+      0.15,
+      0.36
+     ],
+     "paint": "brass",
+     "y": 7.0,
+     "z": 3.4
+    },
+    {
+     "box": [
+      8.2,
+      1.58,
+      0.26
+     ],
+     "paint": "signface",
+     "lit": "glass",
+     "y": 7.15,
+     "z": 3.42
+    },
+    {
+     "box": [
+      8.5,
+      0.15,
+      0.36
+     ],
+     "paint": "brass",
+     "y": 8.73,
+     "z": 3.4
+    },
+    {
+     "box": [
+      0.34,
+      0.34,
+      0.34
+     ],
+     "paint": "brass",
+     "x": -2.45,
+     "y": 4.3,
+     "z": 3.42
+    },
+    {
+     "cyl": [
+      0.3,
+      0.22,
+      0.62,
+      6
+     ],
+     "paint": "lamp",
+     "lit": "beacon",
+     "x": -2.45,
+     "y": 3.6,
+     "z": 3.55
+    },
+    {
+     "cone": [
+      0.3,
+      0.26,
+      6
+     ],
+     "paint": "brass",
+     "x": -2.45,
+     "y": 4.2,
+     "z": 3.55
+    },
+    {
+     "box": [
+      0.34,
+      0.34,
+      0.34
+     ],
+     "paint": "brass",
+     "x": 2.45,
+     "y": 4.3,
+     "z": 3.42
+    },
+    {
+     "cyl": [
+      0.3,
+      0.22,
+      0.62,
+      6
+     ],
+     "paint": "lamp",
+     "lit": "beacon",
+     "x": 2.45,
+     "y": 3.6,
+     "z": 3.55
+    },
+    {
+     "cone": [
+      0.3,
+      0.26,
+      6
+     ],
+     "paint": "brass",
+     "x": 2.45,
+     "y": 4.2,
+     "z": 3.55
+    },
+    {
+     "cyl": [
+      0.46,
+      0.4,
+      0.72,
+      8
+     ],
+     "paint": "trim",
+     "x": -3.5,
+     "y": 0.46,
+     "z": 4.9
+    },
+    {
+     "cyl": [
+      0.4,
+      0.4,
+      0.1,
+      8
+     ],
+     "paint": "soil",
+     "x": -3.5,
+     "y": 1.16,
+     "z": 4.9
+    },
+    {
+     "cyl": [
+      0.075,
+      0.075,
+      0.8,
+      6
+     ],
+     "paint": "soil",
+     "x": -3.5,
+     "y": 1.2,
+     "z": 4.9
+    },
+    {
+     "sphere": [
+      0.58,
+      12,
+      9
+     ],
+     "paint": "leaf",
+     "x": -3.5,
+     "y": 1.9,
+     "z": 4.9
+    },
+    {
+     "cyl": [
+      0.46,
+      0.4,
+      0.72,
+      8
+     ],
+     "paint": "trim",
+     "x": 3.5,
+     "y": 0.46,
+     "z": 4.9
+    },
+    {
+     "cyl": [
+      0.4,
+      0.4,
+      0.1,
+      8
+     ],
+     "paint": "soil",
+     "x": 3.5,
+     "y": 1.16,
+     "z": 4.9
+    },
+    {
+     "cyl": [
+      0.075,
+      0.075,
+      0.8,
+      6
+     ],
+     "paint": "soil",
+     "x": 3.5,
+     "y": 1.2,
+     "z": 4.9
+    },
+    {
+     "sphere": [
+      0.58,
+      12,
+      9
+     ],
+     "paint": "leaf",
+     "x": 3.5,
+     "y": 1.9,
+     "z": 4.9
+    },
+    {
+     "box": [
+      1.0,
+      1.4,
+      0.12
+     ],
+     "paint": "brass",
+     "x": -3.0,
+     "y": 2.6,
+     "z": 3.42
+    },
+    {
+     "box": [
+      0.84,
+      1.22,
+      0.06
+     ],
+     "paint": "signface",
+     "lit": "glass",
+     "x": -3.0,
+     "y": 2.69,
+     "z": 3.48
+    },
+    {
+     "plate": [
+      3.6,
+      0.4,
+      0.1
+     ],
+     "paint": "lamp",
+     "lit": "rampStrip",
+     "z": 3.62,
+     "y": 0.92
+    },
+    {
+     "plate": [
+      9.0,
+      0.34,
+      0.08
+     ],
+     "paint": "lamp",
+     "lit": "pad",
+     "z": -2.0,
+     "y": 0.44
+    },
+    {
+     "box": [
+      0.588,
+      0.294,
+      0.1274
+     ],
+     "paint": "mark",
+     "base": false,
+     "x": -2.7336,
+     "y": 7.814,
+     "z": 3.62
+    },
+    {
+     "cyl": [
+      0.1862,
+      0.1862,
+      0.1274,
+      16
+     ],
+     "rotate": [
+      1.5707963,
+      0,
+      0
+     ],
+     "paint": "mark",
+     "base": false,
+     "x": -3.008,
+     "y": 7.814,
+     "z": 3.62
+    },
+    {
+     "cyl": [
+      0.0706,
+      0.0706,
+      0.2293,
+      12
+     ],
+     "rotate": [
+      1.5707963,
+      0,
+      0
+     ],
+     "paint": "signface",
+     "base": false,
+     "x": -3.008,
+     "y": 7.814,
+     "z": 3.63
+    },
+    {
+     "torus": [
+      0.2205,
+      0.0833,
+      20,
+      8,
+      5.34
+     ],
+     "rotate": [
+      0,
+      0,
+      -0.28
+     ],
+     "paint": "mark",
+     "base": false,
+     "x": -2.0845,
+     "y": 7.9022,
+     "z": 3.62,
+     "stretch": [
+      1,
+      1.2580645161290323,
+      1
+     ]
+    },
+    {
+     "box": [
+      0.2187,
+      0.1666,
+      0.1274
+     ],
+     "paint": "mark",
+     "base": false,
+     "x": -1.9569,
+     "y": 7.8563,
+     "z": 3.62
+    },
+    {
+     "box": [
+      0.1666,
+      0.2599,
+      0.1274
+     ],
+     "paint": "mark",
+     "base": false,
+     "x": -1.8657,
+     "y": 7.7493,
+     "z": 3.62
+    },
+    {
+     "box": [
+      0.1666,
+      0.7644,
+      0.1274
+     ],
+     "paint": "mark",
+     "base": false,
+     "x": -1.3044,
+     "y": 7.9022,
+     "z": 3.62,
+     "rotate": [
+      0,
+      0,
+      -0.2
+     ]
+    },
+    {
+     "box": [
+      0.1666,
+      0.7644,
+      0.1274
+     ],
+     "paint": "mark",
+     "base": false,
+     "x": -1.0613,
+     "y": 7.9022,
+     "z": 3.62,
+     "rotate": [
+      0,
+      0,
+      0.2
+     ]
+    },
+    {
+     "box": [
+      0.3524,
+      0.1666,
+      0.1274
+     ],
+     "paint": "mark",
+     "base": false,
+     "x": -1.1829,
+     "y": 7.7493,
+     "z": 3.62
+    },
+    {
+     "box": [
+      0.1666,
+      0.7644,
+      0.1274
+     ],
+     "paint": "mark",
+     "base": false,
+     "x": -0.5018,
+     "y": 7.9022,
+     "z": 3.62
+    },
+    {
+     "box": [
+      0.5225,
+      0.1666,
+      0.1274
+     ],
+     "paint": "mark",
+     "base": false,
+     "x": -0.2979,
+     "y": 7.6033,
+     "z": 3.62
+    },
+    {
+     "box": [
+      0.1666,
+      0.7644,
+      0.1274
+     ],
+     "paint": "mark",
+     "base": false,
+     "x": 0.3998,
+     "y": 7.9022,
+     "z": 3.62
+    },
+    {
+     "box": [
+      0.5225,
+      0.1666,
+      0.1274
+     ],
+     "paint": "mark",
+     "base": false,
+     "x": 0.6037,
+     "y": 7.6033,
+     "z": 3.62
+    },
+    {
+     "box": [
+      0.1666,
+      0.7644,
+      0.1274
+     ],
+     "paint": "mark",
+     "base": false,
+     "x": 1.3014,
+     "y": 7.9022,
+     "z": 3.62
+    },
+    {
+     "box": [
+      0.4739,
+      0.1666,
+      0.1274
+     ],
+     "paint": "mark",
+     "base": false,
+     "x": 1.5553,
+     "y": 8.2011,
+     "z": 3.62
+    },
+    {
+     "box": [
+      0.401,
+      0.1666,
+      0.1274
+     ],
+     "paint": "mark",
+     "base": false,
+     "x": 1.5303,
+     "y": 7.9022,
+     "z": 3.62
+    },
+    {
+     "box": [
+      0.4739,
+      0.1666,
+      0.1274
+     ],
+     "paint": "mark",
+     "base": false,
+     "x": 1.5553,
+     "y": 7.6033,
+     "z": 3.62
+    },
+    {
+     "box": [
+      0.1666,
+      0.3975,
+      0.1274
+     ],
+     "paint": "mark",
+     "base": false,
+     "x": 2.2838,
+     "y": 8.0933,
+     "z": 3.62,
+     "rotate": [
+      0,
+      0,
+      0.34
+     ]
+    },
+    {
+     "box": [
+      0.1666,
+      0.3975,
+      0.1274
+     ],
+     "paint": "mark",
+     "base": false,
+     "x": 2.5633,
+     "y": 8.0933,
+     "z": 3.62,
+     "rotate": [
+      0,
+      0,
+      -0.34
+     ]
+    },
+    {
+     "box": [
+      0.1666,
+      0.3822,
+      0.1274
+     ],
+     "paint": "mark",
+     "base": false,
+     "x": 2.4235,
+     "y": 7.7035,
+     "z": 3.62
+    }
+   ]
+  }
+ },
+ "buildings": {
+  "scaffold": "#9AB47E",
+  "fallbackAccent": "#D68C45"
+ },
+ "world": {
+  "scale": 1.05,
+  "deck": 1.0,
+  "floor": {
+   "kind": "plate",
+   "base": "#7A6A5C",
+   "panel": "#A9846A",
+   "seam": "rgba(58,44,36,0.8)",
+   "bolt": "rgba(228,214,190,0.55)",
+   "tint": 0.45,
+   "roughness": 0.6,
+   "metalness": 0.04,
+   "relief": 0.55
+  },
+  "kits": {
+   "forest": "builtin:forest.glb"
+  },
+  "atlas": {
+   "source": "colors",
+   "cols": 8,
+   "rows": 4,
+   "colors": [
+    "#1A1A18",
+    "#F7EBDC",
+    "#617979",
+    "#2F4F4F",
+    "#7F492F",
+    "#D68C45",
+    "#b95000",
+    "#936F39",
+    "#9AB47E",
+    "#D4DFC8",
+    "#F3F6EF",
+    "#D68C45",
+    "#858C94",
+    "#1F2937",
+    "#4C6F81",
+    "#FFD9A0",
+    "#233B3B",
+    "#E6D8C2",
+    "#C8A97E",
+    "#9C7B52",
+    "#BFD4DD",
+    "#2B2723",
+    "#B08D57",
+    "#287D3C",
+    "#DA1414",
+    "#A4C3D1",
+    "#2E5AAC",
+    "#4D4D4D",
+    "#F2E6D2",
+    "#6E5A3E",
+    "#8E9BA0",
+    "#151A1A"
+   ]
+  },
+  "cells": {
+   "WHITE": 1,
+   "STEEL": 2,
+   "SLATE": 3,
+   "TIMBER": 4,
+   "COPPER": 5,
+   "FLAME": 6,
+   "GOLD": 7,
+   "HERB": 8,
+   "PRODUCE": 9,
+   "CHALK": 10,
+   "TRIM": 11,
+   "GREY": 12,
+   "DARK": 13,
+   "MARLIN": 14,
+   "LAMP": 15,
+   "TILE_DARK": 16,
+   "LINEN": 17,
+   "BOARD": 18,
+   "CRATE": 19,
+   "GLASS": 20,
+   "CHAR": 21,
+   "BRASS": 22,
+   "GREEN": 23,
+   "RED": 24,
+   "ICE": 25,
+   "BLUE": 26,
+   "INK": 27,
+   "PAPER": 28,
+   "SACK": 29,
+   "ZINC": 30,
+   "SHADOW": 31
+  },
+  "accentCells": [
+   "TRIM"
+  ],
+  "surfaces": {
+   "WHITE": [
+    0.35,
+    0.02
+   ],
+   "STEEL": [
+    0.28,
+    0.75
+   ],
+   "SLATE": [
+    0.55,
+    0.08
+   ],
+   "TIMBER": [
+    0.85,
+    0
+   ],
+   "COPPER": [
+    0.32,
+    0.68
+   ],
+   "FLAME": [
+    0.55,
+    0.1
+   ],
+   "GOLD": [
+    0.3,
+    0.72
+   ],
+   "HERB": [
+    0.9,
+    0
+   ],
+   "PRODUCE": [
+    0.88,
+    0
+   ],
+   "CHALK": [
+    0.92,
+    0
+   ],
+   "TRIM": [
+    0.45,
+    0.1
+   ],
+   "MARLIN": [
+    0.4,
+    0.35
+   ],
+   "LAMP": [
+    0.6,
+    0
+   ],
+   "BOARD": [
+    0.8,
+    0
+   ],
+   "GLASS": [
+    0.12,
+    0.2
+   ],
+   "CHAR": [
+    0.95,
+    0
+   ],
+   "ZINC": [
+    0.35,
+    0.6
+   ],
+   "TILE_DARK": [
+    0.5,
+    0.06
+   ]
+  },
+  "recipes": [
+   {
+    "id": "pass",
+    "label": "The pass",
+    "steps": [
+     {
+      "plate": [
+       2.0,
+       1.1,
+       0.08
+      ],
+      "cell": "TILE_DARK"
+     },
+     {
+      "box": [
+       1.9,
+       0.62,
+       0.9
+      ],
+      "cell": "STEEL",
+      "y": 0.08
+     },
+     {
+      "box": [
+       1.96,
+       0.06,
+       0.96
+      ],
+      "cell": "ZINC",
+      "y": 0.7
+     },
+     {
+      "cyl": [
+       0.045,
+       0.045,
+       0.86,
+       8
+      ],
+      "cell": "GOLD",
+      "x": -0.82,
+      "y": 0.76
+     },
+     {
+      "cyl": [
+       0.045,
+       0.045,
+       0.86,
+       8
+      ],
+      "cell": "GOLD",
+      "x": 0.82,
+      "y": 0.76
+     },
+     {
+      "box": [
+       1.8,
+       0.1,
+       0.34
+      ],
+      "cell": "TRIM",
+      "y": 1.62
+     },
+     {
+      "grid": {
+       "cyl": [
+        0.07,
+        0.07,
+        0.1,
+        8
+       ],
+       "cell": "LAMP",
+       "emissive": 1,
+       "y": 1.52
+      },
+      "cols": 3,
+      "rows": 1,
+      "dx": 0.62,
+      "dz": 0
+     },
+     {
+      "box": [
+       1.72,
+       0.03,
+       0.03
+      ],
+      "cell": "INK",
+      "y": 1.4,
+      "z": 0.14
+     },
+     {
+      "box": [
+       0.11,
+       0.15,
+       0.006
+      ],
+      "cell": "PAPER",
+      "x": -0.42,
+      "y": 1.26,
+      "z": 0.14
+     },
+     {
+      "box": [
+       0.11,
+       0.15,
+       0.006
+      ],
+      "cell": "PAPER",
+      "x": -0.05,
+      "y": 1.26,
+      "z": 0.14,
+      "chance": 0.8
+     },
+     {
+      "box": [
+       0.11,
+       0.15,
+       0.006
+      ],
+      "cell": "PAPER",
+      "x": 0.33,
+      "y": 1.26,
+      "z": 0.14,
+      "chance": 0.55
+     },
+     {
+      "cyl": [
+       0.17,
+       0.17,
+       0.13,
+       12
+      ],
+      "cell": "WHITE",
+      "x": -0.68,
+      "y": 0.76
+     },
+     {
+      "cyl": [
+       0.19,
+       0.15,
+       0.03,
+       12
+      ],
+      "cell": "WHITE",
+      "x": 0.24,
+      "y": 0.76,
+      "chance": 0.7
+     },
+     {
+      "cyl": [
+       0.1,
+       0.08,
+       0.02,
+       10
+      ],
+      "cell": "HERB",
+      "x": 0.24,
+      "y": 0.79,
+      "chance": 0.5
+     }
+    ]
+   },
+   {
+    "id": "range",
+    "label": "The range",
+    "steps": [
+     {
+      "plate": [
+       1.9,
+       1.0,
+       0.08
+      ],
+      "cell": "TILE_DARK"
+     },
+     {
+      "box": [
+       1.75,
+       0.8,
+       0.82
+      ],
+      "cell": "SLATE",
+      "y": 0.08
+     },
+     {
+      "box": [
+       1.8,
+       0.07,
+       0.88
+      ],
+      "cell": "DARK",
+      "y": 0.88
+     },
+     {
+      "grid": {
+       "cyl": [
+        0.16,
+        0.17,
+        0.04,
+        10
+       ],
+       "cell": "DARK",
+       "y": 0.95
+      },
+      "cols": 3,
+      "rows": 2,
+      "dx": 0.52,
+      "dz": 0.34
+     },
+     {
+      "grid": {
+       "cyl": [
+        0.09,
+        0.06,
+        0.05,
+        8
+       ],
+       "cell": "FLAME",
+       "emissive": 0.85,
+       "y": 0.99,
+       "chance": 0.75
+      },
+      "cols": 3,
+      "rows": 2,
+      "dx": 0.52,
+      "dz": 0.34
+     },
+     {
+      "cyl": [
+       0.22,
+       0.21,
+       0.34,
+       12
+      ],
+      "cell": "STEEL",
+      "x": -0.52,
+      "y": 0.95,
+      "chance": 0.8
+     },
+     {
+      "cyl": [
+       0.24,
+       0.18,
+       0.07,
+       12
+      ],
+      "cell": "COPPER",
+      "x": 0.5,
+      "y": 0.95,
+      "chance": 0.6
+     },
+     {
+      "box": [
+       1.78,
+       0.72,
+       0.07
+      ],
+      "cell": "WHITE",
+      "y": 0.95,
+      "z": -0.42
+     },
+     {
+      "box": [
+       1.86,
+       0.1,
+       1.0
+      ],
+      "cell": "ZINC",
+      "y": 1.67
+     },
+     {
+      "prism": [
+       1.9,
+       0.34,
+       1.05
+      ],
+      "cell": "STEEL",
+      "y": 1.77
+     },
+     {
+      "cyl": [
+       0.16,
+       0.16,
+       0.42,
+       8
+      ],
+      "cell": "STEEL",
+      "x": 0.42,
+      "y": 2.05,
+      "z": -0.2
+     }
+    ]
+   },
+   {
+    "id": "grill",
+    "label": "The grill",
+    "steps": [
+     {
+      "plate": [
+       1.85,
+       1.05,
+       0.08
+      ],
+      "cell": "TILE_DARK"
+     },
+     {
+      "box": [
+       1.6,
+       0.58,
+       0.86
+      ],
+      "cell": "DARK",
+      "y": 0.08
+     },
+     {
+      "box": [
+       1.42,
+       0.22,
+       0.7
+      ],
+      "cell": "CHAR",
+      "y": 0.66
+     },
+     {
+      "grid": {
+       "sphere": [
+        0.055,
+        6,
+        5
+       ],
+       "cell": "FLAME",
+       "emissive": 0.95,
+       "sy": 0.5,
+       "y": 0.7
+      },
+      "cols": 5,
+      "rows": 3,
+      "dx": 0.26,
+      "dz": 0.19
+     },
+     {
+      "grid": {
+       "cyl": [
+        0.022,
+        0.022,
+        0.66,
+        6
+       ],
+       "rotate": [
+        1.5707963,
+        0,
+        0
+       ],
+       "cell": "ZINC",
+       "y": 0.88
+      },
+      "cols": 9,
+      "rows": 1,
+      "dx": 0.155,
+      "dz": 0
+     },
+     {
+      "box": [
+       1.5,
+       0.04,
+       0.74
+      ],
+      "cell": "STEEL",
+      "y": 0.84,
+      "z": 0
+     },
+     {
+      "cyl": [
+       0.045,
+       0.045,
+       0.78,
+       6
+      ],
+      "cell": "STEEL",
+      "x": -0.72,
+      "y": 0.9,
+      "z": -0.3
+     },
+     {
+      "cyl": [
+       0.045,
+       0.045,
+       0.78,
+       6
+      ],
+      "cell": "STEEL",
+      "x": 0.72,
+      "y": 0.9,
+      "z": -0.3
+     },
+     {
+      "box": [
+       1.62,
+       0.09,
+       0.66
+      ],
+      "cell": "ZINC",
+      "y": 1.68,
+      "z": -0.14
+     },
+     {
+      "cyl": [
+       0.026,
+       0.026,
+       0.34,
+       6
+      ],
+      "cell": "STEEL",
+      "x": 0.0,
+      "y": 1.77,
+      "z": -0.14
+     },
+     {
+      "box": [
+       0.05,
+       0.34,
+       0.05
+      ],
+      "cell": "TIMBER",
+      "x": -0.72,
+      "y": 1.28,
+      "z": -0.29,
+      "chance": 0.7
+     },
+     {
+      "box": [
+       0.44,
+       0.05,
+       0.3
+      ],
+      "cell": "CRATE",
+      "x": 0.5,
+      "y": 0.7,
+      "z": 0.46,
+      "chance": 0.7
+     },
+     {
+      "sphere": [
+       0.06,
+       6,
+       5
+      ],
+      "cell": "FLAME",
+      "sy": 0.6,
+      "x": 0.44,
+      "y": 0.75,
+      "z": 0.46,
+      "chance": 0.7
+     },
+     {
+      "sphere": [
+       0.06,
+       6,
+       5
+      ],
+      "cell": "FLAME",
+      "sy": 0.6,
+      "x": 0.58,
+      "y": 0.75,
+      "z": 0.46,
+      "chance": 0.5
+     }
+    ]
+   },
+   {
+    "id": "bar",
+    "label": "The bar",
+    "steps": [
+     {
+      "plate": [
+       2.0,
+       1.2,
+       0.08
+      ],
+      "cell": "TILE_DARK"
+     },
+     {
+      "box": [
+       1.86,
+       0.92,
+       0.62
+      ],
+      "cell": "TIMBER",
+      "y": 0.08,
+      "z": -0.12
+     },
+     {
+      "box": [
+       1.96,
+       0.07,
+       0.78
+      ],
+      "cell": "ZINC",
+      "y": 1.0,
+      "z": -0.05
+     },
+     {
+      "box": [
+       1.9,
+       0.06,
+       0.06
+      ],
+      "cell": "GOLD",
+      "y": 0.88,
+      "z": 0.21
+     },
+     {
+      "cyl": [
+       0.04,
+       0.04,
+       0.72,
+       6
+      ],
+      "cell": "GOLD",
+      "x": -0.8,
+      "y": 1.07,
+      "z": -0.34
+     },
+     {
+      "cyl": [
+       0.04,
+       0.04,
+       0.72,
+       6
+      ],
+      "cell": "GOLD",
+      "x": 0.8,
+      "y": 1.07,
+      "z": -0.34
+     },
+     {
+      "box": [
+       1.74,
+       0.05,
+       0.26
+      ],
+      "cell": "TIMBER",
+      "y": 1.45,
+      "z": -0.34
+     },
+     {
+      "grid": {
+       "cyl": [
+        0.055,
+        0.05,
+        0.3,
+        8
+       ],
+       "cell": "GLASS",
+       "y": 1.5
+      },
+      "cols": 6,
+      "rows": 1,
+      "dx": 0.28,
+      "dz": 0
+     },
+     {
+      "grid": {
+       "cyl": [
+        0.022,
+        0.022,
+        0.07,
+        6
+       ],
+       "cell": "TRIM",
+       "y": 1.8
+      },
+      "cols": 6,
+      "rows": 1,
+      "dx": 0.28,
+      "dz": 0
+     },
+     {
+      "cyl": [
+       0.05,
+       0.05,
+       0.26,
+       8
+      ],
+      "cell": "STEEL",
+      "x": -0.42,
+      "y": 1.07,
+      "z": -0.05
+     },
+     {
+      "cyl": [
+       0.03,
+       0.03,
+       0.14,
+       6
+      ],
+      "rotate": [
+       1.5707963,
+       0,
+       0
+      ],
+      "cell": "STEEL",
+      "x": -0.42,
+      "y": 1.26,
+      "z": 0.04
+     },
+     {
+      "cyl": [
+       0.05,
+       0.05,
+       0.26,
+       8
+      ],
+      "cell": "STEEL",
+      "x": -0.28,
+      "y": 1.07,
+      "z": -0.05
+     },
+     {
+      "cyl": [
+       0.03,
+       0.03,
+       0.14,
+       6
+      ],
+      "rotate": [
+       1.5707963,
+       0,
+       0
+      ],
+      "cell": "STEEL",
+      "x": -0.28,
+      "y": 1.26,
+      "z": 0.04
+     },
+     {
+      "grid": {
+       "cyl": [
+        0.05,
+        0.062,
+        0.13,
+        8
+       ],
+       "cell": "GLASS",
+       "y": 1.07
+      },
+      "cols": 3,
+      "rows": 1,
+      "dx": 0.17,
+      "dz": 0
+     },
+     {
+      "cyl": [
+       0.16,
+       0.14,
+       0.05,
+       10
+      ],
+      "cell": "TIMBER",
+      "x": -0.5,
+      "y": 0.62,
+      "z": 0.58
+     },
+     {
+      "cyl": [
+       0.045,
+       0.045,
+       0.62,
+       6
+      ],
+      "cell": "DARK",
+      "x": -0.5,
+      "y": 0.0,
+      "z": 0.58
+     },
+     {
+      "cyl": [
+       0.16,
+       0.14,
+       0.05,
+       10
+      ],
+      "cell": "TIMBER",
+      "x": 0.1,
+      "y": 0.62,
+      "z": 0.58,
+      "chance": 0.85
+     },
+     {
+      "cyl": [
+       0.045,
+       0.045,
+       0.62,
+       6
+      ],
+      "cell": "DARK",
+      "x": 0.1,
+      "y": 0.0,
+      "z": 0.58,
+      "chance": 0.85
+     },
+     {
+      "cyl": [
+       0.16,
+       0.14,
+       0.05,
+       10
+      ],
+      "cell": "TIMBER",
+      "x": 0.68,
+      "y": 0.62,
+      "z": 0.58,
+      "chance": 0.6
+     },
+     {
+      "cyl": [
+       0.045,
+       0.045,
+       0.62,
+       6
+      ],
+      "cell": "DARK",
+      "x": 0.68,
+      "y": 0.0,
+      "z": 0.58,
+      "chance": 0.6
+     }
+    ]
+   },
+   {
+    "id": "prep",
+    "label": "Prep table",
+    "steps": [
+     {
+      "ring": {
+       "cyl": [
+        0.035,
+        0.035,
+        0.78,
+        6
+       ],
+       "cell": "STEEL",
+       "y": 0.0
+      },
+      "count": 4,
+      "radius": 0.48,
+      "jitter": 0,
+      "startAngle": 0.7854
+     },
+     {
+      "box": [
+       1.0,
+       0.05,
+       0.5
+      ],
+      "cell": "STEEL",
+      "y": 0.22
+     },
+     {
+      "box": [
+       1.1,
+       0.06,
+       0.62
+      ],
+      "cell": "ZINC",
+      "y": 0.78
+     },
+     {
+      "box": [
+       0.46,
+       0.035,
+       0.3
+      ],
+      "cell": "BOARD",
+      "x": -0.2,
+      "y": 0.84
+     },
+     {
+      "sphere": [
+       0.055,
+       6,
+       5
+      ],
+      "cell": "HERB",
+      "x": -0.3,
+      "y": 0.875
+     },
+     {
+      "sphere": [
+       0.05,
+       6,
+       5
+      ],
+      "cell": "PRODUCE",
+      "x": -0.16,
+      "y": 0.875,
+      "chance": 0.85
+     },
+     {
+      "sphere": [
+       0.045,
+       6,
+       5
+      ],
+      "cell": "COPPER",
+      "x": -0.08,
+      "y": 0.875,
+      "chance": 0.6
+     },
+     {
+      "box": [
+       0.16,
+       0.008,
+       0.026
+      ],
+      "cell": "ZINC",
+      "x": -0.22,
+      "y": 0.875,
+      "ry": 0.4,
+      "chance": 0.7
+     },
+     {
+      "box": [
+       0.34,
+       0.2,
+       0.28
+      ],
+      "cell": "CRATE",
+      "x": 0.3,
+      "y": 0.27,
+      "chance": 0.7
+     }
+    ]
+   },
+   {
+    "id": "walkin",
+    "label": "Walk-in",
+    "steps": [
+     {
+      "box": [
+       1.5,
+       1.7,
+       1.3
+      ],
+      "cell": "MARLIN",
+      "y": 0
+     },
+     {
+      "box": [
+       1.54,
+       0.12,
+       1.34
+      ],
+      "cell": "ZINC",
+      "y": 1.7
+     },
+     {
+      "box": [
+       0.72,
+       1.4,
+       0.06
+      ],
+      "cell": "ICE",
+      "y": 0.04,
+      "z": 0.64
+     },
+     {
+      "cyl": [
+       0.035,
+       0.035,
+       0.34,
+       8
+      ],
+      "cell": "STEEL",
+      "x": 0.26,
+      "y": 0.62,
+      "z": 0.69
+     },
+     {
+      "box": [
+       0.05,
+       1.3,
+       0.02
+      ],
+      "cell": "GLASS",
+      "x": -0.38,
+      "y": 0.06,
+      "z": 0.68,
+      "emissive": 0.5,
+      "chance": 0.4
+     },
+     {
+      "box": [
+       0.2,
+       0.13,
+       0.03
+      ],
+      "cell": "DARK",
+      "x": -0.45,
+      "y": 1.42,
+      "z": 0.63
+     },
+     {
+      "box": [
+       0.14,
+       0.07,
+       0.01
+      ],
+      "cell": "ICE",
+      "x": -0.45,
+      "y": 1.45,
+      "z": 0.65,
+      "emissive": 1
+     },
+     {
+      "box": [
+       1.2,
+       0.06,
+       0.06
+      ],
+      "cell": "TRIM",
+      "y": 1.5,
+      "z": 0.64
+     }
+    ]
+   },
+   {
+    "id": "oven",
+    "label": "Deck oven",
+    "steps": [
+     {
+      "plate": [
+       1.5,
+       1.0,
+       0.1
+      ],
+      "cell": "TILE_DARK"
+     },
+     {
+      "box": [
+       1.35,
+       0.55,
+       0.85
+      ],
+      "cell": "SLATE",
+      "y": 0.1
+     },
+     {
+      "box": [
+       1.35,
+       0.55,
+       0.85
+      ],
+      "cell": "SLATE",
+      "y": 0.65
+     },
+     {
+      "box": [
+       1.1,
+       0.34,
+       0.04
+      ],
+      "cell": "CHAR",
+      "y": 0.18,
+      "z": 0.42
+     },
+     {
+      "box": [
+       1.1,
+       0.34,
+       0.04
+      ],
+      "cell": "CHAR",
+      "y": 0.73,
+      "z": 0.42
+     },
+     {
+      "box": [
+       0.96,
+       0.2,
+       0.02
+      ],
+      "cell": "FLAME",
+      "y": 0.25,
+      "z": 0.44,
+      "emissive": 0.9
+     },
+     {
+      "box": [
+       0.96,
+       0.2,
+       0.02
+      ],
+      "cell": "FLAME",
+      "y": 0.8,
+      "z": 0.44,
+      "emissive": 0.9,
+      "chance": 0.6
+     },
+     {
+      "cyl": [
+       0.028,
+       0.028,
+       1.15,
+       6
+      ],
+      "rotate": [
+       0,
+       0,
+       1.5707963
+      ],
+      "cell": "BRASS",
+      "y": 0.5,
+      "z": 0.45
+     },
+     {
+      "cyl": [
+       0.028,
+       0.028,
+       1.15,
+       6
+      ],
+      "rotate": [
+       0,
+       0,
+       1.5707963
+      ],
+      "cell": "BRASS",
+      "y": 1.05,
+      "z": 0.45
+     },
+     {
+      "box": [
+       1.4,
+       0.1,
+       0.9
+      ],
+      "cell": "ZINC",
+      "y": 1.2
+     },
+     {
+      "cyl": [
+       0.13,
+       0.15,
+       1.1,
+       8
+      ],
+      "cell": "DARK",
+      "x": 0.48,
+      "y": 1.3
+     },
+     {
+      "cyl": [
+       0.18,
+       0.18,
+       0.1,
+       8
+      ],
+      "cell": "ZINC",
+      "x": 0.48,
+      "y": 2.4
+     },
+     {
+      "ring": {
+       "cyl": [
+        0.09,
+        0.07,
+        0.13,
+        6
+       ],
+       "cell": "TIMBER",
+       "y": 1.3
+      },
+      "count": 3,
+      "radius": 0.42,
+      "chance": 0.7
+     }
+    ]
+   },
+   {
+    "id": "larder",
+    "label": "Dry store",
+    "steps": [
+     {
+      "ring": {
+       "cyl": [
+        0.035,
+        0.035,
+        1.2,
+        6
+       ],
+       "cell": "STEEL",
+       "y": 0.0
+      },
+      "count": 4,
+      "radius": 0.48,
+      "jitter": 0,
+      "startAngle": 0.7854
+     },
+     {
+      "box": [
+       1.1,
+       0.05,
+       0.42
+      ],
+      "cell": "TIMBER",
+      "y": 0.28
+     },
+     {
+      "box": [
+       1.1,
+       0.05,
+       0.42
+      ],
+      "cell": "TIMBER",
+      "y": 0.7
+     },
+     {
+      "box": [
+       1.1,
+       0.05,
+       0.42
+      ],
+      "cell": "TIMBER",
+      "y": 1.12
+     },
+     {
+      "grid": {
+       "cyl": [
+        0.075,
+        0.075,
+        0.19,
+        8
+       ],
+       "cell": "GLASS",
+       "y": 0.33
+      },
+      "cols": 4,
+      "rows": 1,
+      "dx": 0.26,
+      "dz": 0
+     },
+     {
+      "grid": {
+       "cyl": [
+        0.078,
+        0.078,
+        0.02,
+        8
+       ],
+       "cell": "TRIM",
+       "y": 0.52
+      },
+      "cols": 4,
+      "rows": 1,
+      "dx": 0.26,
+      "dz": 0
+     },
+     {
+      "grid": {
+       "cyl": [
+        0.075,
+        0.075,
+        0.19,
+        8
+       ],
+       "cell": "GLASS",
+       "y": 0.75,
+       "chance": 0.8
+      },
+      "cols": 4,
+      "rows": 1,
+      "dx": 0.26,
+      "dz": 0
+     },
+     {
+      "ring": {
+       "sphere": [
+        0.13,
+        7,
+        6
+       ],
+       "cell": "SACK",
+       "sy": 0.8,
+       "y": 0.0
+      },
+      "count": 3,
+      "radius": 0.3,
+      "chance": 0.85
+     }
+    ]
+   },
+   {
+    "id": "dishpit",
+    "label": "Dish pit",
+    "steps": [
+     {
+      "box": [
+       1.1,
+       0.7,
+       0.55
+      ],
+      "cell": "STEEL",
+      "y": 0
+     },
+     {
+      "box": [
+       1.14,
+       0.06,
+       0.6
+      ],
+      "cell": "ZINC",
+      "y": 0.7
+     },
+     {
+      "grid": {
+       "box": [
+        0.42,
+        0.15,
+        0.38
+       ],
+       "cell": "SHADOW",
+       "y": 0.76
+      },
+      "cols": 2,
+      "rows": 1,
+      "dx": 0.48,
+      "dz": 0
+     },
+     {
+      "cyl": [
+       0.028,
+       0.028,
+       0.36,
+       8
+      ],
+      "cell": "GOLD",
+      "y": 0.76,
+      "z": -0.2
+     },
+     {
+      "cyl": [
+       0.024,
+       0.024,
+       0.22,
+       8
+      ],
+      "rotate": [
+       1.5707963,
+       0,
+       0
+      ],
+      "cell": "GOLD",
+      "y": 1.1,
+      "z": -0.1
+     },
+     {
+      "box": [
+       0.42,
+       0.06,
+       0.4
+      ],
+      "cell": "CRATE",
+      "x": 0.34,
+      "y": 0.91,
+      "chance": 0.8
+     },
+     {
+      "cyl": [
+       0.13,
+       0.13,
+       0.02,
+       12
+      ],
+      "rotate": [
+       1.5707963,
+       0,
+       0
+      ],
+      "cell": "WHITE",
+      "x": 0.34,
+      "y": 0.97,
+      "z": -0.12,
+      "chance": 0.85
+     },
+     {
+      "cyl": [
+       0.13,
+       0.13,
+       0.02,
+       12
+      ],
+      "rotate": [
+       1.5707963,
+       0,
+       0
+      ],
+      "cell": "WHITE",
+      "x": 0.34,
+      "y": 0.97,
+      "z": -0.04,
+      "chance": 0.85
+     },
+     {
+      "cyl": [
+       0.13,
+       0.13,
+       0.02,
+       12
+      ],
+      "rotate": [
+       1.5707963,
+       0,
+       0
+      ],
+      "cell": "WHITE",
+      "x": 0.34,
+      "y": 0.97,
+      "z": 0.04,
+      "chance": 0.7
+     },
+     {
+      "cyl": [
+       0.13,
+       0.13,
+       0.02,
+       12
+      ],
+      "rotate": [
+       1.5707963,
+       0,
+       0
+      ],
+      "cell": "WHITE",
+      "x": 0.34,
+      "y": 0.97,
+      "z": 0.12,
+      "chance": 0.55
+     }
+    ]
+   },
+   {
+    "id": "herbs",
+    "label": "Herb bed",
+    "steps": [
+     {
+      "box": [
+       1.15,
+       0.26,
+       0.7
+      ],
+      "cell": "TIMBER",
+      "y": 0
+     },
+     {
+      "box": [
+       1.0,
+       0.08,
+       0.56
+      ],
+      "cell": "SACK",
+      "y": 0.26
+     },
+     {
+      "ring": {
+       "sphere": [
+        0.13,
+        7,
+        6
+       ],
+       "cell": "HERB",
+       "sy": 0.75,
+       "y": 0.34
+      },
+      "count": 6,
+      "radius": 0.34
+     },
+     {
+      "ring": {
+       "sphere": [
+        0.09,
+        6,
+        5
+       ],
+       "cell": "PRODUCE",
+       "sy": 0.8,
+       "y": 0.34
+      },
+      "count": 3,
+      "radius": 0.16
+     },
+     {
+      "box": [
+       0.02,
+       0.2,
+       0.14
+      ],
+      "cell": "CHALK",
+      "x": 0.42,
+      "y": 0.34,
+      "chance": 0.7
+     }
+    ]
+   }
+  ]
+ }
+}
