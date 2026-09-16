@@ -42,6 +42,19 @@ python3 generators/build-jedi-enclave.py   themes/jedi-enclave.json
 python3 generators/build-galley-kitchen.py themes/galley-kitchen.json
 ```
 
+## Credits
+
+A theme is a description of a world for an engine somebody else wrote. The Crew is built
+on **Bot Crossing** by Jarren Rocks ([botcrossing.com](https://botcrossing.com), MIT):
+its character rig, its instanced-mesh crew, its hex plot lattice and its recipe-driven
+buildings are what every theme here is authored against, and the measurements in
+`THEME-REFERENCE.md` are measurements of that rig. The app itself grew out of **Claude
+Command Center** (MIT), which is where the multi-session workbench these themes decorate
+came from.
+
+The theme system, the descriptor format and the generators in this repository are
+MusterDeck's own work on top of that engine.
+
 ## Writing your own
 
 `THEME-REFERENCE.md` is the complete reference for every key a theme can set: the shape
