@@ -466,6 +466,24 @@ cuts its own rounded silhouette with an SDF, **`face`** samples the expression a
 mask (this is the part that shows the state, and every theme wants one), and **`glow`** is
 unlit and pushed past 1.0 so the bloom pass picks it out at night.
 
+### Surfaces: finish, sheen, pattern, clearcoat (0.2.88)
+
+A part's material object also takes what the part is MADE of:
+
+| Key | What it does |
+|---|---|
+| `finish` | A relief family, bumped into the light: `plaster`, `timber`, `weave`, `tile`, `thatch`, `stone`, `metal`, `lacquer`, `drill`, `brushed`, `hammered`. Projected from the part's own frame, so it moves with it. `finishScale` (repeats per unit) and `finishStrength` override the family's look. |
+| `sheen` | 0 to 1: cloth's soft rim light. With `sheenColor`. |
+| `clearcoat` | 0 to 1: a lacquer coat over the paint, with `clearcoatRoughness`. |
+| `pattern` | A colour pattern: `houndstooth`, `check`, `stripe`, in `patternColor` over the part's own colour, `patternScale` repeats per unit. |
+
+`crew.body` takes `finish` and `pattern` too, for a theme that shows the mannequin (the
+kitchen's thighs are its trousers). Buildings get a finish per atlas cell without asking:
+each cell's family is read off its NAME (`THATCH`, `TIMBER_DARK`, `PLASTER`...), and
+`world.finishes` overrides it (`{ "CELL": "stone" }`, or `null` for flat). Building boxes
+are chamferred; `"bevel": false` on a step keeps one sharp. An older app ignores every key in
+this section, so using them does not raise a theme's minimum version.
+
 `glow` takes its colour from the part's `tint` (the session's effort, trim or eye). When a
 glow belongs to the CHARACTER instead -- a lightsabre's blade, which is blue for Rey,
 green for Qui-Gon and red for Vader whatever the session is doing -- write

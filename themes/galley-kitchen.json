@@ -225,7 +225,10 @@
    "drop": [
     "arms",
     "torso"
-   ]
+   ],
+   "pattern": "houndstooth",
+   "patternColor": "#e8e4dc",
+   "patternScale": 7
   },
   "look": {
    "idle": {
@@ -562,7 +565,10 @@
     "material": {
      "roughness": 0.92,
      "metalness": 0.0,
-     "vertexColors": true
+     "vertexColors": true,
+     "finish": "drill",
+     "sheen": 0.4,
+     "sheenColor": "#fff6e4"
     },
     "wear": [
      true,
@@ -839,7 +845,10 @@
     "material": {
      "roughness": 0.9,
      "metalness": 0.0,
-     "vertexColors": true
+     "vertexColors": true,
+     "finish": "drill",
+     "sheen": 0.4,
+     "sheenColor": "#fff6e4"
     },
     "wear": [
      null,
@@ -1196,7 +1205,10 @@
     "material": {
      "roughness": 0.9,
      "metalness": 0.0,
-     "vertexColors": true
+     "vertexColors": true,
+     "finish": "drill",
+     "sheen": 0.4,
+     "sheenColor": "#fff6e4"
     },
     "wear": [
      null,
@@ -1324,7 +1336,10 @@
     "material": {
      "roughness": 0.92,
      "metalness": 0.0,
-     "vertexColors": true
+     "vertexColors": true,
+     "finish": "drill",
+     "sheen": 0.4,
+     "sheenColor": "#fff6e4"
     },
     "wear": [
      true,
@@ -1432,7 +1447,10 @@
     "material": {
      "roughness": 0.92,
      "metalness": 0.0,
-     "vertexColors": true
+     "vertexColors": true,
+     "finish": "drill",
+     "sheen": 0.4,
+     "sheenColor": "#fff6e4"
     },
     "wear": [
      true,
@@ -1599,7 +1617,10 @@
      "roughness": 0.92,
      "metalness": 0.0,
      "vertexColors": true,
-     "double": true
+     "double": true,
+     "finish": "drill",
+     "sheen": 0.4,
+     "sheenColor": "#fff6e4"
     },
     "flex": {
      "from": "top",
@@ -1727,7 +1748,10 @@
      "roughness": 0.92,
      "metalness": 0.0,
      "vertexColors": true,
-     "double": true
+     "double": true,
+     "finish": "drill",
+     "sheen": 0.4,
+     "sheenColor": "#fff6e4"
     },
     "flex": {
      "from": "top",
@@ -1855,7 +1879,10 @@
      "roughness": 0.92,
      "metalness": 0.0,
      "vertexColors": true,
-     "double": true
+     "double": true,
+     "finish": "drill",
+     "sheen": 0.4,
+     "sheenColor": "#fff6e4"
     },
     "flex": {
      "from": "top",
@@ -2055,7 +2082,10 @@
      "roughness": 0.9,
      "metalness": 0.0,
      "vertexColors": true,
-     "double": true
+     "double": true,
+     "finish": "drill",
+     "sheen": 0.4,
+     "sheenColor": "#fff6e4"
     },
     "wear": [
      null,
@@ -2135,7 +2165,10 @@
     "material": {
      "roughness": 0.9,
      "metalness": 0.0,
-     "vertexColors": true
+     "vertexColors": true,
+     "finish": "drill",
+     "sheen": 0.4,
+     "sheenColor": "#fff6e4"
     },
     "wear": [
      true,
@@ -2333,7 +2366,9 @@
      "roughness": 0.88,
      "metalness": 0.0,
      "vertexColors": true,
-     "double": true
+     "double": true,
+     "finish": "drill",
+     "sheen": 0.3
     },
     "flex": {
      "from": "top",
@@ -2551,7 +2586,9 @@
      "roughness": 0.88,
      "metalness": 0.0,
      "vertexColors": true,
-     "double": true
+     "double": true,
+     "finish": "drill",
+     "sheen": 0.3
     },
     "flex": {
      "from": "top",
@@ -2769,7 +2806,9 @@
      "roughness": 0.88,
      "metalness": 0.0,
      "vertexColors": true,
-     "double": true
+     "double": true,
+     "finish": "drill",
+     "sheen": 0.3
     },
     "flex": {
      "from": "top",
@@ -3130,7 +3169,9 @@
      "roughness": 0.88,
      "metalness": 0.0,
      "vertexColors": true,
-     "double": true
+     "double": true,
+     "finish": "drill",
+     "sheen": 0.3
     },
     "wear": [
      null,
@@ -3221,7 +3262,9 @@
     "material": {
      "roughness": 0.88,
      "metalness": 0.0,
-     "vertexColors": true
+     "vertexColors": true,
+     "finish": "weave",
+     "sheen": 0.35
     },
     "wear": [
      null,
@@ -3270,7 +3313,10 @@
      "roughness": 0.95,
      "metalness": 0.0,
      "vertexColors": true,
-     "double": true
+     "double": true,
+     "finish": "drill",
+     "sheen": 0.4,
+     "sheenColor": "#fff6e4"
     },
     "flex": {
      "from": "top",
@@ -3393,7 +3439,8 @@
     "material": {
      "roughness": 0.8,
      "metalness": 0.02,
-     "vertexColors": true
+     "vertexColors": true,
+     "finish": "timber"
     },
     "wear": [
      null,
@@ -3485,7 +3532,10 @@
     "material": {
      "roughness": 0.95,
      "metalness": 0.0,
-     "vertexColors": true
+     "vertexColors": true,
+     "finish": "drill",
+     "sheen": 0.4,
+     "sheenColor": "#fff6e4"
     },
     "wear": [
      null,
@@ -3554,7 +3604,10 @@
     "material": {
      "roughness": 0.92,
      "metalness": 0.0,
-     "vertexColors": true
+     "vertexColors": true,
+     "finish": "drill",
+     "sheen": 0.4,
+     "sheenColor": "#fff6e4"
     },
     "wear": [
      true,
@@ -3781,7 +3834,10 @@
     "material": {
      "roughness": 0.92,
      "metalness": 0.0,
-     "vertexColors": true
+     "vertexColors": true,
+     "finish": "drill",
+     "sheen": 0.4,
+     "sheenColor": "#fff6e4"
     },
     "wear": [
      true,
@@ -3986,7 +4042,34 @@
        ],
        "latheSeg": 22,
        "color": "#241f1d"
-      },
+      }
+     ]
+    },
+    "material": {
+     "roughness": 0.9,
+     "metalness": 0.0,
+     "vertexColors": true,
+     "pattern": "houndstooth",
+     "patternColor": "#e8e4dc",
+     "patternScale": 7,
+     "finish": "drill"
+    },
+    "wear": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "id": "cuff.l",
+    "bone": "lowerleg.l",
+    "at": [
+     0,
+     0,
+     0
+    ],
+    "shape": {
+     "parts": [
       {
        "torus": [
         0.142,
@@ -4010,7 +4093,7 @@
      ]
     },
     "material": {
-     "roughness": 0.9,
+     "roughness": 0.92,
      "metalness": 0.0,
      "vertexColors": true
     },
@@ -4127,7 +4210,34 @@
        ],
        "latheSeg": 22,
        "color": "#241f1d"
-      },
+      }
+     ]
+    },
+    "material": {
+     "roughness": 0.9,
+     "metalness": 0.0,
+     "vertexColors": true,
+     "pattern": "houndstooth",
+     "patternColor": "#e8e4dc",
+     "patternScale": 7,
+     "finish": "drill"
+    },
+    "wear": [
+     true,
+     true,
+     true
+    ]
+   },
+   {
+    "id": "cuff.r",
+    "bone": "lowerleg.r",
+    "at": [
+     0,
+     0,
+     0
+    ],
+    "shape": {
+     "parts": [
       {
        "torus": [
         0.142,
@@ -4151,7 +4261,7 @@
      ]
     },
     "material": {
-     "roughness": 0.9,
+     "roughness": 0.92,
      "metalness": 0.0,
      "vertexColors": true
     },
@@ -4323,7 +4433,8 @@
     "material": {
      "roughness": 0.35,
      "metalness": 0.6,
-     "vertexColors": true
+     "vertexColors": true,
+     "finish": "brushed"
     },
     "wear": [
      true,
@@ -4425,7 +4536,8 @@
     "material": {
      "roughness": 0.35,
      "metalness": 0.6,
-     "vertexColors": true
+     "vertexColors": true,
+     "finish": "brushed"
     },
     "wear": [
      null,
@@ -4499,7 +4611,8 @@
     "material": {
      "roughness": 0.35,
      "metalness": 0.6,
-     "vertexColors": true
+     "vertexColors": true,
+     "finish": "brushed"
     },
     "wear": [
      null,
@@ -4619,7 +4732,8 @@
     "material": {
      "roughness": 0.4,
      "metalness": 0.6,
-     "vertexColors": true
+     "vertexColors": true,
+     "finish": "hammered"
     },
     "wear": [
      true,
