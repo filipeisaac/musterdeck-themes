@@ -1,0 +1,22 @@
+[
+  {
+    "id": "galley-kitchen",
+    "name": "Galley Kitchen",
+    "blurb": "A brigade kitchen at service. Every repo is a station, every session a cook, every thread a ticket on the rail.",
+    "file": "themes/galley-kitchen.json",
+    "sha256": "d32d20ccfcba449074407458e4a28dd28cf5bfc8fa63f6d7e8a4136c0fa0eef1",
+    "minApp": "0.2.82",
+    "crew": "The Brigade: a commis, a chef de partie, a chef de cuisine",
+    "why": "Galley Solutions' own brand palette, so it is not in the app."
+  },
+  {
+    "id": "jedi-enclave",
+    "name": "Jedi Enclave",
+    "blurb": "An enclave on a temple world. Every repo is a training hall, the Falcon is docked at the edge of it, and Vader walks among them.",
+    "file": "themes/jedi-enclave.json",
+    "sha256": "b771983438b7c4c0ade08676fa9bf4ef3a137d673686a0264b00b9247beb1932",
+    "minApp": "0.2.85",
+    "crew": "Rey (blue blade), Qui-Gon (green), Vader (red)",
+    "why": "Third-party IP, so it is not in the app."
+  }
+]

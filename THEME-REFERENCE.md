@@ -7,6 +7,11 @@ status pills.
 **A theme is a folder with a `theme.json` in it.** Adding one needs no rebuild and no
 restart of anything but the Crew view. Switching between them is live.
 
+> This file also SHIPS WITH THE APP, as `references/descriptor-keys.md` inside the
+> `new-crew-theme` skill, so somebody writing a theme from an installed MusterDeck has the
+> key list without a checkout of this repo. The two copies are kept identical by
+> `tests/unit/main/bundled-skill-docs.test.ts` -- edit this one and copy it across.
+
 ```
 <data dir>/themes/
   my-village/
@@ -67,7 +72,7 @@ value rather than failing.
 | `scatters` | **Planting lists of your own**, by the name a world's `scatter` refers to. |
 | `status` | The words on the status pills. The eight KEYS are the status vocabulary and are not yours to change; the strings are. |
 | `plotPalette` | One accent per zone, picked by hashing the repo name. **Order matters**: a zone's accent is `palette[hash(name) % length]`. |
-| `crew.look.<state>` | `trim` and `eye` per state. Keep at least one eye channel above 1.0 or the bloom pass stops catching it and the glow dies at night. |
+| `crew.look.<state>` | `trim` and `eye` per state, for **`idle`, `sleeping` and `leaving` only**. `working`, `waiting`, `blocked`, `celebrating` and `spawning` are the app's own `--status-*` colours and a theme's values for them are ignored: a status means the same thing in every world, and the same trim paints the building's work-site cord. Keep at least one eye channel above 1.0 or the bloom pass stops catching it and the glow dies at night. |
 | `crew.suitTones` | Fallback suit colours, by id hash, when effort is unknown. |
 | `crew.effortTones` | `low` `medium` `high` `xhigh` `max` `ultracode`. |
 | `crew.effortUnknownTone` | Effort the statusline has not confirmed. Assert no temperature here. |
@@ -271,14 +276,31 @@ One vocabulary, shared by buildings, the arrival point and the crew's worn kit:
 { "prism":  [w, h, d] }                     // a gabled roof, ridge along X
 { "cyl":    [rTop, rBottom, h, segments] }  // a post, a barrel; 4 segments is a pyramid
 { "shell":  [rTop, rBottom, h, segments] }  // an OPEN cylinder: a cape, a sleeve
+{ "arc":    [rTop, rBottom, h, segments, start, sweep] }  // PART of one: a garment
+                                           // panel. 0 is +Z, so a centred front
+                                           // panel is start = -sweep / 2
 { "plate":  [w, d, thickness] }             // a deck, a paving slab, a pond
 { "sphere": [r, wSeg, hSeg] }
 { "cone":   [r, h, segments] }
 { "torus":  [r, tube, rSeg, tSeg, arc] }
 { "cap":    [r, phiSpread, thetaSpread, wSeg, hSeg] }  // a patch of a sphere's surface
 { "rbox":   [w, h, d, radius] }             // a rounded box
+{ "lathe":  [[r, y], ...], "latheSeg": 32, "latheArc": [start, sweep] }
+                                           // a turned PROFILE: a garment, a bowl, a
+                                           // helmet. Arc optional, 0 is +Z as for `arc`
+{ "tube":   [[x, y, z], ...], "tubeR": r, "taper": [f0, f1], "tubeSeg": [along, round] }
+                                           // a tube along a smooth curve; `taper`
+                                           // pulls it in toward the end: a horn, a whisker
+{ "softbox": [w, h, d, blend, seg] }        // a box blended toward its ellipsoid:
+                                           // 0 a box, 1 an ellipsoid. Cloth, a hand, a pad
+{ "capsule": [r, length] }                  // a shaft with rounded ends: a handle, a pole
 { "parts":  [ { ...shape, "color": "#rrggbb", "tint": true }, ... ] }  // merged
 ```
+
+`lathe`, `tube`, `softbox` and `capsule` arrived in 0.2.82, so a theme that uses them
+does not load in an older app. A lathe's profile may be written in either direction; the
+engine turns its faces outward. A `parts` group may nest another `parts` group, and each
+keeps its own colours: a helmet built once and scaled as a whole is one nested group.
 
 In a composite, each piece keeps its own `color`. A piece that also says `"tint": true`
 takes the **wearer's** colour instead, wherever the part's own `tint` comes from, so one
@@ -431,7 +453,7 @@ central, like a sash, reads better at map distance than the body ever did.
 | `id` | Unique. Names the mesh. |
 | `bone` | One of nine. See below. |
 | `shape` | Anything from the shape vocabulary. Centred on `at`. |
-| `material` | `visor`, `face`, `glow`, or `{ roughness, metalness, env, double, vertexColors, color }`. |
+| `material` | `visor`, `face`, `glow`, `{ glow: "#hex", intensity }`, or `{ roughness, metalness, env, double, vertexColors, color }`. |
 | `tint` | `suit` (the effort colour), `trim` (the state colour), `eye`, `pulseEye`, `pulseTrim`, or omitted for the material's own colour. Applies to the whole part unless its composite masks pieces with `"tint": true`. |
 | `at` / `rot` | Offset and rotation in the bone's frame. |
 | `shadow` | `false` to stop it casting one. |
@@ -443,6 +465,12 @@ Three materials are the engine's rather than yours, because each is a shader: **
 cuts its own rounded silhouette with an SDF, **`face`** samples the expression atlas as a
 mask (this is the part that shows the state, and every theme wants one), and **`glow`** is
 unlit and pushed past 1.0 so the bloom pass picks it out at night.
+
+`glow` takes its colour from the part's `tint` (the session's effort, trim or eye). When a
+glow belongs to the CHARACTER instead -- a lightsabre's blade, which is blue for Rey,
+green for Qui-Gon and red for Vader whatever the session is doing -- write
+`{ "glow": "#3f9bff" }` and leave `tint` off. It is unlit like the other and multiplied by
+`intensity` (default 1.6), which keeps it above 1.0 for the bloom. Needs 0.2.85.
 
 **A `glow` part is ONE COLOUR, and nothing warns you.** `_partMaterial` returns a flat
 `MeshBasicMaterial` with no `vertexColors` -- deliberately, because the whole point of a
@@ -649,8 +677,11 @@ placement. Reordering the steps in a recipe reshuffles which building each sessi
 - The attach bones, and what they cost: `src/renderer/crew/engine/agents/crew.js`
 - The arrival point: `src/renderer/crew/engine/world/ship.js`
 - The DEFAULT theme, generated, and the reference for a complete one:
-  `tools/crew-sheet/examples/build-crew.py` ->
-  `src/renderer/public/crew/themes/crew.json`
+  `tools/crew-sheet/examples/build-harbour-signals.py` (the world) plus
+  `tools/crew-sheet/examples/harbour_kit.py` (the crew) ->
+  `src/renderer/public/crew/themes/crew.json`. The kit is a separate module because it
+  is where an external review's hard constraints are enforced, and each of them is an
+  `assert` with the failure it prevents written next to it.
 - A full second theme -- its own worlds, buildings, crew and gate, built entirely from
   primitives and one shipped kit: `src/renderer/public/crew/themes/samurai-village.json`
 - A third, generated rather than hand-written, whose every offset is computed from the

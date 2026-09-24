@@ -5,15 +5,24 @@ Crew themes that do not ship in the default MusterDeck app.
 A theme is **one JSON file**. Drop it in MusterDeck's runtime themes folder and the
 app picks it up with no rebuild and no restart of anything but the view.
 
-| Theme | What it is | Why it is not in the app |
-|---|---|---|
-| `jedi-enclave` | An enclave on a temple world. Every repo is a training hall, the arrival point is the Millennium Falcon, and the rank ladder is Padawan / Luke / Vader. | Third-party IP |
-| `galley-kitchen` | A brigade kitchen at service. Every repo is a station, every session a cook, every thread a ticket on the rail. Built in Galley Solutions' own brand palette. | One company's branding |
+| Theme | What it is | Needs | Why it is not in the app |
+|---|---|---|---|
+| `jedi-enclave` | An enclave on a temple world. Every repo is a training hall, the arrival point is the Millennium Falcon. The crew is Rey (blue blade), Qui-Gon (green) and Vader (red). | MusterDeck 0.2.85 | Third-party IP |
+| `galley-kitchen` | A brigade kitchen at service. Every repo is a station, every session a cook, every thread a ticket on the rail. The crew is the Brigade: commis, chef de partie, chef de cuisine. | MusterDeck 0.2.82 | One company's branding |
 
-Both are complete and validated. Neither is abandoned: the generators that produce
-them are here too, and both still pass the app's own theme tests.
+Both were reviewed and approved on 2026-09-24, crew and buildings.
+
+`themes/index.json` lists them for tools: id, name, blurb, file, `sha256` of the file,
+`minApp` (the oldest MusterDeck that can load it) and a line on the crew.
 
 ## Installing one
+
+The easy way: in a Claude Code session on a machine with MusterDeck, run
+`/musterdeck-install-custom-theme`. It lists what is here, says which you already have and
+whether yours is current, installs the ones you pick, and tells you when your app is too
+old for one. MusterDeck installs that skill itself (0.2.86 and later).
+
+By hand:
 
 ```bash
 # macOS  (the data directory is legacy-named; this is deliberate and frozen)
@@ -31,15 +40,21 @@ Then open the Crew view and choose **Reload themes** from its view menu.
 id. Use the folder names above (`jedi-enclave`, `galley-kitchen`) so the id matches what
 each file declares, or the theme will load once and silently fall back on the next launch.
 
-## Regenerating
+**An app older than `minApp` refuses the theme** (it cannot validate what the file uses),
+and a refused theme simply does not appear. Update MusterDeck first.
+
+## Where they come from
 
 Neither theme is hand-written. Every offset is computed from the measured character rig
 and asserted before the file is emitted, which is the only way a kit reliably ends up
-*on* the body rather than inside it.
+*on* the body rather than inside it. The generators need the rig tooling in the MusterDeck
+repository, so they live there, and this repository is published from it:
 
 ```bash
-python3 generators/build-jedi-enclave.py   themes/jedi-enclave.json
-python3 generators/build-galley-kitchen.py themes/galley-kitchen.json
+# in the MusterDeck repo
+python3 tools/crew-sheet/evolve/jedi_cast.py         # the Enclave's crew
+python3 tools/crew-sheet/evolve/kitchen_brigade.py   # the Brigade
+python3 tools/crew-sheet/publish-themes.py <this checkout>
 ```
 
 ## Credits
