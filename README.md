@@ -1,9 +1,20 @@
 # MusterDeck themes
 
-Crew themes that do not ship in the default MusterDeck app.
+**Optional Crew themes. This is not MusterDeck itself.**
 
-A theme is **one JSON file**. Drop it in MusterDeck's runtime themes folder and the
-app picks it up with no rebuild and no restart of anything but the view.
+MusterDeck is a desktop app for running many Claude Code sessions at once. It lives at
+[**filipeisaac/musterdeck-releases**](https://github.com/filipeisaac/musterdeck-releases),
+which is where you download it and where its issues belong. You do not need anything here
+to use it: it ships with two Crew themes of its own (a space colony and a samurai
+village) and they are the ones most people will ever see.
+
+This repository is a side shelf. It holds the themes that **cannot** ship inside the app,
+each for a reason of its own, and everything in it is opt-in: nothing here is installed by
+default, nothing here is required, and removing a theme leaves the app exactly as it was.
+
+A theme is **one JSON file** — no code, no executable, no assets. Drop it in MusterDeck's
+runtime themes folder and the app picks it up with no rebuild and no restart of anything
+but the view.
 
 | Theme | What it is | Needs | Why it is not in the app |
 |---|---|---|---|
@@ -20,7 +31,14 @@ Both were reviewed and approved on 2026-09-24, crew and buildings.
 The easy way: in a Claude Code session on a machine with MusterDeck, run
 `/musterdeck-install-custom-theme`. It lists what is here, says which you already have and
 whether yours is current, installs the ones you pick, and tells you when your app is too
-old for one. MusterDeck installs that skill itself (0.2.86 and later).
+old for one. The skill comes from MusterDeck's plugin:
+
+```
+/plugin marketplace add filipeisaac/musterdeck-releases
+/plugin install musterdeck@musterdeck
+```
+
+(MusterDeck 1.0.0 and earlier installed that skill itself instead; either way you have it.)
 
 By hand:
 
@@ -56,6 +74,22 @@ python3 tools/crew-sheet/evolve/jedi_cast.py         # the Enclave's crew
 python3 tools/crew-sheet/evolve/kitchen_brigade.py   # the Brigade
 python3 tools/crew-sheet/publish-themes.py <this checkout>
 ```
+
+## What these are, and are not
+
+Each theme here is a description of a world: colours, shapes, the words on the status
+pills, and where things stand. They are fan work and brand work respectively, made for
+one desktop app's decorative 3D view, and they are not affiliated with, endorsed by or
+sponsored by anyone.
+
+- **Jedi Enclave** is fan work. Star Wars and its characters, vehicles and worlds are
+  trademarks of Lucasfilm Ltd.; nothing here is official, and no Lucasfilm asset is
+  included or redistributed. It is geometry and colour describing an homage, written from
+  scratch against MusterDeck's own rig. That is exactly why it is not in the app.
+- **Galley Kitchen** uses the palette and vocabulary of Galley Solutions, which is why it
+  is not in the app either.
+
+If you own something here and would rather it were not, open an issue and it comes down.
 
 ## Credits
 
